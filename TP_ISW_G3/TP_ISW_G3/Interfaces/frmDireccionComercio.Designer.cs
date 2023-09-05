@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtNro = new System.Windows.Forms.TextBox();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
             this.cmbCiudades = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,30 +40,30 @@
             this.btnDireccionEntrega = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 71);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtCalle.Location = new System.Drawing.Point(42, 71);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(76, 20);
+            this.txtCalle.TabIndex = 0;
             // 
-            // textBox2
+            // txtNro
             // 
-            this.textBox2.Location = new System.Drawing.Point(42, 118);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtNro.Location = new System.Drawing.Point(42, 118);
+            this.txtNro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(76, 20);
+            this.txtNro.TabIndex = 1;
             // 
-            // textBox3
+            // txtReferencia
             // 
-            this.textBox3.Location = new System.Drawing.Point(46, 222);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 88);
-            this.textBox3.TabIndex = 2;
+            this.txtReferencia.Location = new System.Drawing.Point(46, 222);
+            this.txtReferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReferencia.Multiline = true;
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(175, 88);
+            this.txtReferencia.TabIndex = 2;
             // 
             // cmbCiudades
             // 
@@ -147,9 +147,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCiudades);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtReferencia);
+            this.Controls.Add(this.txtNro);
+            this.Controls.Add(this.txtCalle);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDireccionComercio";
             this.Text = "frmDireccion";
@@ -161,9 +161,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtNro;
+        private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.ComboBox cmbCiudades;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

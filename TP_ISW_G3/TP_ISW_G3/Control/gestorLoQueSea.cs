@@ -13,6 +13,8 @@ namespace TP_ISW_G3.Control
         private frmLoQueSea frmLoQueSea;
         private frmDireccionComercio frmDireccion;
 
+        private Direccion direccionComercio;
+        private Direccion direccionEntrega;
 
         public gestorLoQueSea(frmInicio frmInicio)
         {
@@ -32,5 +34,16 @@ namespace TP_ISW_G3.Control
             frmDireccion = new frmDireccionComercio(this);
             frmDireccion.Show();
         }
+
+        public void cargarDireccionComercio(Direccion _direccionComercio)
+        {
+            direccionComercio = _direccionComercio;
+        }
+
+        public void cargarDireccionEntrega(Direccion _direccionEntrega)
+        {
+            direccionEntrega = _direccionEntrega;
+        }
+
     }
 }
