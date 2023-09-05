@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_ISW_G3.Control;
 
 namespace TP_ISW_G3
 {
-    public partial class Form1 : Form
+    public partial class frmInicio : Form
     {
-        public Form1()
+        gestorLoQueSea gestor;
+        public frmInicio()
         {
             InitializeComponent();
+            gestor = new gestorLoQueSea(this);
+        }
+
+        private void btnLoQueSea_Click(object sender, EventArgs e)
+        {
+            gestor.crearFormLoQueSea();
         }
     }
 }
