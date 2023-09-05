@@ -16,5 +16,24 @@ namespace TP_ISW_G3.Interfaces
         {
             InitializeComponent();
         }
+
+        public void cargarComboCiudades()
+        {
+            cmbCiudades.Items.Clear();
+            cmbCiudades.Items.Add("Córdoba");
+            cmbCiudades.Items.Add("Unquillo");
+            cmbCiudades.Items.Add("Villa Allende");
+            cmbCiudades.Items.Add("La calera");
+        }
+        private void frmDireccionComercio_Load(object sender, EventArgs e)
+        {
+            cargarComboCiudades();
+        }
+
+        private void btnDireccionEntrega_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

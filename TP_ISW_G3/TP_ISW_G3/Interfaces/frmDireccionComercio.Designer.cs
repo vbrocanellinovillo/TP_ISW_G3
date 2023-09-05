@@ -31,7 +31,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCiudades = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,105 +42,118 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 87);
+            this.textBox1.Location = new System.Drawing.Point(42, 71);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(56, 145);
+            this.textBox2.Location = new System.Drawing.Point(42, 118);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(61, 273);
+            this.textBox3.Location = new System.Drawing.Point(46, 222);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 108);
+            this.textBox3.Size = new System.Drawing.Size(175, 88);
             this.textBox3.TabIndex = 2;
             // 
-            // comboBox1
+            // cmbCiudades
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(56, 206);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbCiudades.FormattingEnabled = true;
+            this.cmbCiudades.Location = new System.Drawing.Point(42, 167);
+            this.cmbCiudades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCiudades.Name = "cmbCiudades";
+            this.cmbCiudades.Size = new System.Drawing.Size(92, 21);
+            this.cmbCiudades.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 68);
+            this.label1.Location = new System.Drawing.Point(40, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Calle *";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 126);
+            this.label2.Location = new System.Drawing.Point(40, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Numero *";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 187);
+            this.label3.Location = new System.Drawing.Point(44, 152);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ciudad *";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 254);
+            this.label4.Location = new System.Drawing.Point(44, 206);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Referencia";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(116, 28);
+            this.label5.Location = new System.Drawing.Point(87, 23);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 16);
+            this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Direccion Comercio";
             // 
             // btnDireccionEntrega
             // 
-            this.btnDireccionEntrega.Location = new System.Drawing.Point(97, 446);
+            this.btnDireccionEntrega.Location = new System.Drawing.Point(73, 362);
+            this.btnDireccionEntrega.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDireccionEntrega.Name = "btnDireccionEntrega";
-            this.btnDireccionEntrega.Size = new System.Drawing.Size(144, 63);
+            this.btnDireccionEntrega.Size = new System.Drawing.Size(108, 51);
             this.btnDireccionEntrega.TabIndex = 9;
             this.btnDireccionEntrega.Text = "Ir a direccion de entrega";
             this.btnDireccionEntrega.UseVisualStyleBackColor = true;
+            this.btnDireccionEntrega.Click += new System.EventHandler(this.btnDireccionEntrega_Click);
             // 
             // frmDireccionComercio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 588);
+            this.ClientSize = new System.Drawing.Size(272, 478);
             this.Controls.Add(this.btnDireccionEntrega);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCiudades);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDireccionComercio";
             this.Text = "frmDireccion";
+            this.Load += new System.EventHandler(this.frmDireccionComercio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +164,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCiudades;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

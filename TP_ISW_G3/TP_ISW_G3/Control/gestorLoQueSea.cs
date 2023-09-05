@@ -13,6 +13,7 @@ namespace TP_ISW_G3.Control
         private frmLoQueSea frmLoQueSea;
         private frmDireccionComercio frmDireccion;
 
+
         public gestorLoQueSea(frmInicio frmInicio)
         {
             this.frmInicio = frmInicio;
