@@ -10,3 +10,4 @@ C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.CoreCompileInputs.cache
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.exe
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.pdb
+C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccionComercio.resources

@@ -48,6 +48,8 @@ namespace TP_ISW_G3.Interfaces
                     long maxSizeBytes = 5 * 1024 * 1024; // 5 MB en bytes
                     if (fileInfo.Length <= maxSizeBytes)
                     {
+                        pictureBox1.Image = Image.FromFile(filePath);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                         // Aquí puedes procesar el archivo seleccionado
                         // filePath contiene la ruta al archivo JPG válido
                         // Puedes cargarlo o realizar cualquier otra operación necesaria.
