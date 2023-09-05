@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_ISW_G3.Control;
 
 namespace TP_ISW_G3.Interfaces
 {
-    public partial class frmDireccionComercio : Form
+    public partial class frmDireccion : Form
     {
-        public frmDireccionComercio(Control.gestorLoQueSea gestorLoQueSea)
+        gestorLoQueSea gestor;
+
+        public frmDireccion(Control.gestorLoQueSea gestorLoQueSea, string titulo)
         {
             InitializeComponent();
+            gestor = gestorLoQueSea;
+            lblTitulo.Text = titulo;
         }
 
         public void cargarComboCiudades()
@@ -30,15 +35,8 @@ namespace TP_ISW_G3.Interfaces
             cargarComboCiudades();
         }
 
-        public void validarCampos()
+        public Direccion validarCampos()
         {
-            // Validar que se haya seleccionado una ciudad
-            if (cmbCiudades.SelectedItem == null)
-            {
-                MessageBox.Show("Por favor, selecciona una ciudad.");
-                return;
-            }
-
             // Validar que el nombre de la calle y el número no estén en blanco
             string nombreCalle = txtCalle.Text.Trim();
             string numero = txtNro.Text.Trim();
@@ -46,32 +44,29 @@ namespace TP_ISW_G3.Interfaces
             if (string.IsNullOrEmpty(nombreCalle) || string.IsNullOrEmpty(numero))
             {
                 MessageBox.Show("Por favor, completa el nombre de la calle y el número.");
-                return;
+                return null;
             }
 
-            // Validar que al menos uno de los campos de referencia se haya llenado
-            string referencia = txtReferencia.Text.Trim();
 
-            if (string.IsNullOrEmpty(referencia))
+            // Validar que se haya seleccionado una ciudad
+            if (cmbCiudades.SelectedItem == null)
             {
-                DialogResult resultado = MessageBox.Show("¿No has proporcionado una referencia. ¿Deseas continuar?", "Confirmación", MessageBoxButtons.YesNo);
-
-                if (resultado == DialogResult.No)
-                {
-                    return;
-                }
+                MessageBox.Show("Por favor, selecciona una ciudad.");
+                return null;
             }
 
-            // Si todas las validaciones son exitosas, puedes guardar la información
+
+            string referencia = txtReferencia.Text.Trim();
             string ciudad = cmbCiudades.SelectedItem.ToString();
 
-            // Aquí puedes realizar la acción deseada, como guardar la información en una base de datos o realizar otro proceso.
-            MessageBox.Show($"Información válida: Calle: {nombreCalle}, Número: {numero}, Ciudad: {ciudad}, Referencia: {referencia}");
+            return new Direccion(nombreCalle, numero, ciudad, referencia);
         }
 
         private void btnDireccionEntrega_Click(object sender, EventArgs e)
         {
-            validarCampos();            
+            Direccion direccionComercio = validarCampos();
+            gestor.cargarDireccionComercio(direccionComercio);
+            gestor.crearFormDireccionEntrega("Direccion Entrega");
         }
 
     }

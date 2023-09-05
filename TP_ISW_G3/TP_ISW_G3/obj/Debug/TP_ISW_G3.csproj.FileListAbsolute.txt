@@ -16,7 +16,6 @@ F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\bin\D
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.pdb
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.AssemblyReference.cache
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.SuggestedBindingRedirects.cache
-F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccionComercio.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.frmInicio.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmLoQueSea.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Properties.Resources.resources
@@ -24,3 +23,4 @@ F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\D
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.CoreCompileInputs.cache
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.exe
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.pdb
+F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccion.resources

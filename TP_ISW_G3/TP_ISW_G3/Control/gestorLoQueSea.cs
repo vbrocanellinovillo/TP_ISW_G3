@@ -11,7 +11,8 @@ namespace TP_ISW_G3.Control
     {
         private frmInicio frmInicio;
         private frmLoQueSea frmLoQueSea;
-        private frmDireccionComercio frmDireccion;
+        private frmDireccion frmDireccionComercio;
+        private frmDireccion frmDireccionEntrega;
 
         private Direccion direccionComercio;
         private Direccion direccionEntrega;
@@ -28,11 +29,11 @@ namespace TP_ISW_G3.Control
             frmLoQueSea.Show();
         }
 
-        internal void crearFormDireccion()
+        public void crearFormDireccionComercio(string titulo)
         {
             frmLoQueSea.Hide();
-            frmDireccion = new frmDireccionComercio(this);
-            frmDireccion.Show();
+            frmDireccionComercio = new frmDireccion(this, titulo);
+            frmDireccionComercio.Show();
         }
 
         public void cargarDireccionComercio(Direccion _direccionComercio)
@@ -40,10 +41,18 @@ namespace TP_ISW_G3.Control
             direccionComercio = _direccionComercio;
         }
 
+
+
+        public void crearFormDireccionEntrega(string titulo)
+        {
+            frmDireccionComercio.Hide();
+            frmDireccionEntrega = new frmDireccion(this, titulo);
+            frmDireccionEntrega.Show();
+        }
+
         public void cargarDireccionEntrega(Direccion _direccionEntrega)
         {
             direccionEntrega = _direccionEntrega;
         }
-
     }
 }

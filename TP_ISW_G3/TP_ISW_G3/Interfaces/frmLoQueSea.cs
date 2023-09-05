@@ -66,7 +66,7 @@ namespace TP_ISW_G3.Interfaces
         {
             if(txtDescripcion.Text.Length > 0)
             {
-                gestor.crearFormDireccion();
+                gestor.crearFormDireccionComercio("Dirección Comercio");
             }
             else
             {
