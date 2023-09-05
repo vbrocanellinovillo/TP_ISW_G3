@@ -8,14 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_ISW_G3.Control;
 
 namespace TP_ISW_G3.Interfaces
 {
     public partial class frmLoQueSea : Form
     {
-        public frmLoQueSea()
+        gestorLoQueSea gestor;
+        public frmLoQueSea(gestorLoQueSea gestorLoQueSea)
         {
             InitializeComponent();
+            gestor = gestorLoQueSea;   
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,6 +57,18 @@ namespace TP_ISW_G3.Interfaces
                         MessageBox.Show("El tamaño del archivo supera los 5 MB permitidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void btnDireccion_Click(object sender, EventArgs e)
+        {
+            if(txtDescripcion.Text.Length > 0)
+            {
+                gestor.crearFormDireccion();
+            }
+            else
+            {
+                MessageBox.Show("Falta completar la descripcion");
             }
         }
     }

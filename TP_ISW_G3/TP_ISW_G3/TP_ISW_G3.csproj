@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\gestorLoQueSea.cs" />
+    <Compile Include="Interfaces\frmDireccionComercio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmDireccionComercio.Designer.cs">
+      <DependentUpon>frmDireccionComercio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interfaces\frmDireccionComercio.resx">
+      <DependentUpon>frmDireccionComercio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>

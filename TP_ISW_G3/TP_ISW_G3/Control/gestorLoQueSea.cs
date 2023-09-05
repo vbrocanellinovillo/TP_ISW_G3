@@ -7,10 +7,11 @@ using TP_ISW_G3.Interfaces;
 
 namespace TP_ISW_G3.Control
 {
-    internal class gestorLoQueSea
+    public class gestorLoQueSea
     {
         private frmInicio frmInicio;
         private frmLoQueSea frmLoQueSea;
+        private frmDireccionComercio frmDireccion;
 
         public gestorLoQueSea(frmInicio frmInicio)
         {
@@ -20,8 +21,15 @@ namespace TP_ISW_G3.Control
         public void crearFormLoQueSea()
         {
             frmInicio.Hide();
-            frmLoQueSea = new frmLoQueSea();
+            frmLoQueSea = new frmLoQueSea(this);
             frmLoQueSea.Show();
+        }
+
+        internal void crearFormDireccion()
+        {
+            frmLoQueSea.Hide();
+            frmDireccion = new frmDireccionComercio(this);
+            frmDireccion.Show();
         }
     }
 }
