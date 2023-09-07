@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtCalle = new System.Windows.Forms.TextBox();
-            this.txtNro = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.cmbCiudades = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnDireccionEntrega = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.txtNro = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtCalle
@@ -47,14 +47,6 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(76, 20);
             this.txtCalle.TabIndex = 0;
-            // 
-            // txtNro
-            // 
-            this.txtNro.Location = new System.Drawing.Point(42, 118);
-            this.txtNro.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNro.Name = "txtNro";
-            this.txtNro.Size = new System.Drawing.Size(76, 20);
-            this.txtNro.TabIndex = 1;
             // 
             // txtReferencia
             // 
@@ -124,23 +116,33 @@
             this.lblTitulo.TabIndex = 8;
             this.lblTitulo.Text = "Direccion Comercio";
             // 
-            // btnDireccionEntrega
+            // btnNext
             // 
-            this.btnDireccionEntrega.Location = new System.Drawing.Point(73, 362);
-            this.btnDireccionEntrega.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDireccionEntrega.Name = "btnDireccionEntrega";
-            this.btnDireccionEntrega.Size = new System.Drawing.Size(108, 51);
-            this.btnDireccionEntrega.TabIndex = 9;
-            this.btnDireccionEntrega.Text = "Ir a direccion de entrega";
-            this.btnDireccionEntrega.UseVisualStyleBackColor = true;
-            this.btnDireccionEntrega.Click += new System.EventHandler(this.btnDireccionEntrega_Click);
+            this.btnNext.Location = new System.Drawing.Point(73, 362);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(108, 51);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "Ir a direccion de entrega";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // frmDireccionComercio
+            // txtNro
+            // 
+            this.txtNro.Location = new System.Drawing.Point(42, 118);
+            this.txtNro.Mask = "99999";
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(76, 20);
+            this.txtNro.TabIndex = 10;
+            this.txtNro.ValidatingType = typeof(int);
+            // 
+            // frmDireccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 478);
-            this.Controls.Add(this.btnDireccionEntrega);
+            this.Controls.Add(this.txtNro);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -148,10 +150,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCiudades);
             this.Controls.Add(this.txtReferencia);
-            this.Controls.Add(this.txtNro);
             this.Controls.Add(this.txtCalle);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmDireccionComercio";
+            this.Name = "frmDireccion";
             this.Text = "frmDireccion";
             this.Load += new System.EventHandler(this.frmDireccionComercio_Load);
             this.ResumeLayout(false);
@@ -162,7 +163,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtCalle;
-        private System.Windows.Forms.TextBox txtNro;
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.ComboBox cmbCiudades;
         private System.Windows.Forms.Label label1;
@@ -170,6 +170,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnDireccionEntrega;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.MaskedTextBox txtNro;
     }
 }

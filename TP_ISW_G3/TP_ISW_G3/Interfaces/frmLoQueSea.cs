@@ -23,16 +23,7 @@ namespace TP_ISW_G3.Interfaces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            //openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp|Todos los archivos|*.*";
-
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    string rutaImagen = openFileDialog1.FileName;
-            //    // Aquí puedes usar la ruta de la imagen seleccionada como desees.
-            //    // Por ejemplo, mostrarla en un PictureBox si tienes uno en tu formulario.
-            //    pictureBox1.ImageLocation = rutaImagen;
-            //}
+           
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Archivos JPG (*.jpg)|*.jpg";

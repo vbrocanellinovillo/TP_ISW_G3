@@ -13,6 +13,7 @@ namespace TP_ISW_G3.Control
         private frmLoQueSea frmLoQueSea;
         private frmDireccion frmDireccionComercio;
         private frmDireccion frmDireccionEntrega;
+        private frmPago frmPago;
 
         private Direccion direccionComercio;
         private Direccion direccionEntrega;
@@ -53,6 +54,13 @@ namespace TP_ISW_G3.Control
         public void cargarDireccionEntrega(Direccion _direccionEntrega)
         {
             direccionEntrega = _direccionEntrega;
+        }
+
+        public void crearFormPago()
+        {
+            frmDireccionEntrega.Hide();
+            frmPago = new frmPago(this);
+            frmPago.Show();
         }
     }
 }
