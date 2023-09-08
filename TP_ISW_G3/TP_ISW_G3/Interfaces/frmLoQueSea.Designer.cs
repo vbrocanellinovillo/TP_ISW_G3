@@ -36,23 +36,27 @@
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDireccion = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(29, 48);
+            this.txtDescripcion.Location = new System.Drawing.Point(23, 37);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(260, 138);
+            this.txtDescripcion.Size = new System.Drawing.Size(198, 96);
             this.txtDescripcion.TabIndex = 0;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(26, 29);
+            this.lblDescripcion.Location = new System.Drawing.Point(20, 22);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(90, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(73, 13);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripcion: *";
             // 
@@ -66,9 +70,10 @@
             // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(29, 221);
+            this.btnImagen.Location = new System.Drawing.Point(23, 202);
+            this.btnImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(137, 99);
+            this.btnImagen.Size = new System.Drawing.Size(103, 48);
             this.btnImagen.TabIndex = 3;
             this.btnImagen.Text = "Cargar imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
@@ -80,32 +85,55 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 326);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 254);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 146);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // btnDireccion
             // 
-            this.btnDireccion.Location = new System.Drawing.Point(134, 512);
+            this.btnDireccion.Location = new System.Drawing.Point(72, 415);
+            this.btnDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDireccion.Name = "btnDireccion";
-            this.btnDireccion.Size = new System.Drawing.Size(155, 67);
+            this.btnDireccion.Size = new System.Drawing.Size(116, 54);
             this.btnDireccion.TabIndex = 5;
             this.btnDireccion.Text = "Ir a datos de direccion";
             this.btnDireccion.UseVisualStyleBackColor = true;
             this.btnDireccion.Click += new System.EventHandler(this.btnDireccion_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 151);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Precio: *";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(23, 167);
+            this.txtPrecio.Mask = "999999999999999999";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(123, 20);
+            this.txtPrecio.TabIndex = 7;
+            // 
             // frmLoQueSea
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 591);
+            this.ClientSize = new System.Drawing.Size(292, 480);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDireccion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtDescripcion);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLoQueSea";
             this.Text = "frmLoQueSea";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -124,5 +152,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDireccion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
     }
 }

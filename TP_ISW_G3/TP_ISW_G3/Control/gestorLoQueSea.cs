@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace TP_ISW_G3.Control
         private frmDireccion frmDireccionEntrega;
         private frmPago frmPago;
 
+        private double total;
         private Direccion direccionComercio;
         private Direccion direccionEntrega;
 
@@ -28,6 +30,16 @@ namespace TP_ISW_G3.Control
             frmInicio.Hide();
             frmLoQueSea = new frmLoQueSea(this);
             frmLoQueSea.Show();
+        }
+
+        public void cargarTotal(double precio)
+        {
+            total = precio + 500;
+        }
+
+        public string devolverTotal()
+        {
+            return total.ToString();
         }
 
         public void crearFormDireccionComercio(string titulo)
@@ -61,6 +73,16 @@ namespace TP_ISW_G3.Control
             frmDireccionEntrega.Hide();
             frmPago = new frmPago(this);
             frmPago.Show();
+        }
+
+        public Color setErrorColor()
+        {
+            return Color.FromArgb(0xaa, 0x0b, 0x20);
+        }
+
+        public Color clearErrorColor()
+        {
+            return Color.FromArgb(0xff, 0xff, 0xff);
         }
     }
 }

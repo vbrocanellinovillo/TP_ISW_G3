@@ -55,14 +55,22 @@ namespace TP_ISW_G3.Interfaces
 
         private void btnDireccion_Click(object sender, EventArgs e)
         {
-            if(txtDescripcion.Text.Length > 0)
-            {
-                gestor.crearFormDireccionComercio("Dirección Comercio");
-            }
-            else
+            if(txtDescripcion.Text.Trim() == "")
             {
                 MessageBox.Show("Falta completar la descripcion");
+                txtDescripcion.Focus();
+                return;
             }
+
+            if (txtPrecio.Text.Trim() == "")
+            {
+                MessageBox.Show("Falta completar el precio");
+                txtPrecio.Focus();
+                return;
+            }
+
+            gestor.cargarTotal(Convert.ToDouble(txtPrecio.Text));
+            gestor.crearFormDireccionComercio("Dirección Comercio");
         }
     }
 }
