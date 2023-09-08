@@ -64,12 +64,24 @@ namespace TP_ISW_G3.Interfaces
 
             if (txtPrecio.Text.Trim() == "")
             {
-                MessageBox.Show("Falta completar el precio");
+                MessageBox.Show("Falta el precio");
                 txtPrecio.Focus();
                 return;
             }
 
-            gestor.cargarTotal(Convert.ToDouble(txtPrecio.Text));
+            double precio;
+
+            if (double.TryParse(txtPrecio.Text, out precio))
+            {
+                gestor.cargarTotal(precio);
+            } else
+            {
+                MessageBox.Show("El precio ingresado no es válido. Por favor, ingrese un número válido.");
+                precio = 0.0;
+                txtPrecio.Focus();
+                return;
+            }
+
             gestor.crearFormDireccionComercio("Dirección Comercio");
         }
     }

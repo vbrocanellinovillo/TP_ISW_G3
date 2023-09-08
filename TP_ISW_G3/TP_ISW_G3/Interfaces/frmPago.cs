@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_ISW_G3.Control;
@@ -15,8 +16,25 @@ namespace TP_ISW_G3.Interfaces
     {
 
         private gestorLoQueSea gestor;
-        private bool maskedText1Touched = false;
-        private string primerNumero = "";
+        private string maskedText1Value = "";
+        private string maskedText2Value = "";
+        private string maskedText3Value = "";
+
+        // Estilo cantidad efectivo
+        private bool cantidadEfectivoValid = false;
+        private bool cantidadEfectivoTouched = false;
+
+        // Estilo nro tarjeta
+        private bool nrtoTarjetaTouched = false;
+        private bool nroTarjetaValid = false;
+
+        // Estilo nombre titular
+        private bool nombreTitularTouched = false;
+        private bool nombreTitularValid = false;
+
+        // Estilo codigo seguridad
+        private bool cvcTouched = false;
+        private bool cvcValid = false;
 
         public frmPago(Control.gestorLoQueSea _gestorLoQueSea)
         {
@@ -64,10 +82,36 @@ namespace TP_ISW_G3.Interfaces
             label8.Visible = false;
         }
 
+        public void resetTxts()
+        {
+            maskedTextBox1.Text = "";
+            maskedTextBox2.Text = "";
+            maskedTextBox3.Text = "";
+
+            nroTarjetaValid = false;
+            nrtoTarjetaTouched = false;
+
+            nombreTitularValid = false;
+            nombreTitularTouched = false;
+
+            cvcValid = false;
+            cvcTouched = false;
+
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+
+            maskedTextBox1.BackColor = gestor.clearErrorColor();
+            maskedTextBox2.BackColor = gestor.clearErrorColor();
+            maskedTextBox3.BackColor = gestor.clearErrorColor();
+        }
+
         private void cmbMediosPago_SelectedIndexChanged(object sender, EventArgs e)
         {
             panel1.Visible = true;
             btnPagar.Enabled = true;
+
+            resetTxts();
 
             if (cmbMediosPago.SelectedIndex == 0)
             {
@@ -85,17 +129,70 @@ namespace TP_ISW_G3.Interfaces
             lblTotal.Text = gestor.devolverTotal();
         }
 
-        private void btnPagar_Click(object sender, EventArgs e)
+
+        public void validarEfectivo()
         {
-            MessageBox.Show("Pago completo");
+            double efectivo;
+            if (double.TryParse(maskedText1Value, out efectivo))
+            {
+                if (efectivo < Convert.ToDouble(lblTotal.Text))
+                {
+                    cantidadEfectivoValid = false;
+                    return;
+                }
+
+                cantidadEfectivoValid = true;
+                return;
+            } else
+            {
+                MessageBox.Show("El monto ingresado no es válido. Por favor, ingrese un número válido.");
+            }
+
+        }
+
+        public void estiloCantidadEfectivo()
+        {
+            if (!cantidadEfectivoValid && cantidadEfectivoTouched)
+            {
+                label8.Visible = true;
+                label8.Text = "Ingrese un monto mayor o igual al total";
+                label8.ForeColor = gestor.setErrorColor();
+
+                maskedTextBox1.BackColor = gestor.setErrorColor();
+            }
+            else
+            {
+                label8.Visible = false;
+
+                maskedTextBox1.BackColor = gestor.clearErrorColor();
+            }
         }
 
         
-        public void validarNumeroTarjeta(string primerNumero)
+        public void validarNumeroTarjeta() 
         {
-            if (primerNumero != "4" && maskedText1Touched)
+            if (maskedText1Value.Trim().Length == 0)
+            {
+                return;
+            }
+
+            // Revisar ese 12 despues
+            if (maskedText1Value[0].ToString() == "4" && maskedText1Value.Trim().Length >= 12 )
+            {
+                nroTarjetaValid = true;
+                return;
+            }
+
+            nroTarjetaValid = false;
+            return;
+        }
+
+        public void estiloNumeroTarjeta()
+        {
+            if (!nroTarjetaValid && nrtoTarjetaTouched)
             {
                 label8.Visible = true;
+                label8.Text = "*Numero de tarjeta invalido";
                 label8.ForeColor = gestor.setErrorColor();
 
                 maskedTextBox1.BackColor = gestor.setErrorColor();
@@ -110,36 +207,212 @@ namespace TP_ISW_G3.Interfaces
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
+
             if (cmbMediosPago.SelectedIndex == 0)
             {
+                maskedText1Value = maskedTextBox1.Text;
+
+                // Calcular el vuelto a devolver
                 double total = Convert.ToDouble(lblTotal.Text);
 
                 double vuelto = -1;
 
-                if (maskedTextBox1.Text.Trim().Length > 0)
+                if (maskedText1Value.Trim().Length > 0)
                 {
-                    double montoIngresado = Convert.ToDouble(maskedTextBox1.Text);
-                    vuelto = montoIngresado - total;
+                    double montoIngresado;
+
+                    if (double.TryParse(maskedText1Value, out montoIngresado))
+                    {
+                        vuelto = montoIngresado - total;
+                        maskedTextBox2.Text = (vuelto >= 0) ? vuelto.ToString() : "";
+
+                        validarEfectivo();
+                        estiloCantidadEfectivo();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("El monto ingresado no es válido. Por favor, ingrese un número válido.");
+                    }
                 }
 
-                maskedTextBox2.Text = (vuelto >= 0) ? vuelto.ToString() : ""; 
-
-            } else if (cmbMediosPago.SelectedIndex == 1)
+            }
+            else if (cmbMediosPago.SelectedIndex == 1)
             {
+                maskedText1Value = maskedTextBox1.Text;
 
-                if (maskedTextBox1.Text.Trim().Length > 0)
-                {
-                    primerNumero = maskedTextBox1.Text[0].ToString();
-                }
-
-                validarNumeroTarjeta(primerNumero);
+                validarNumeroTarjeta();
+                estiloNumeroTarjeta();
             }
         }
 
         private void maskedTextBox1_Leave(object sender, EventArgs e)
         {
-            maskedText1Touched = true;
-            validarNumeroTarjeta(primerNumero);
+            if (cmbMediosPago.SelectedIndex == 0)
+            {
+                cantidadEfectivoTouched = true;
+                validarEfectivo();
+                estiloCantidadEfectivo();
+
+                nrtoTarjetaTouched = false;
+            }
+            else if (cmbMediosPago.SelectedIndex == 1)
+            {
+                cantidadEfectivoTouched = false;
+
+                nrtoTarjetaTouched = true;
+                validarNumeroTarjeta();
+                estiloNumeroTarjeta();
+
+            }
+        }
+
+        public void validarNombreTitular()
+        {
+
+            string patron = @"^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$";
+
+            if (Regex.IsMatch(maskedText2Value, patron))
+            {
+                nombreTitularValid = true;
+                return;
+            }
+            else
+            {
+                nombreTitularValid = false;
+                return;
+            }
+        }
+
+        public void estiloNombreTitular()
+        {
+            if (!nombreTitularValid && nombreTitularTouched)
+            {
+                label9.Visible = true;
+                label9.Text = "*Por favor ingrese un nombre";
+                label9.ForeColor = gestor.setErrorColor();
+
+                maskedTextBox2.BackColor = gestor.setErrorColor();
+            }
+            else
+            {
+                label9.Visible = false;
+                label9.Text = "";
+
+                maskedTextBox2.BackColor = gestor.clearErrorColor();
+            }
+        }
+
+        private void maskedTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            maskedText2Value = maskedTextBox2.Text.Trim();
+
+            if (cmbMediosPago.SelectedIndex == 1)
+            {
+                // Validar nombre titular
+                validarNombreTitular();
+                estiloNombreTitular();
+            }
+        }
+
+        private void maskedTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (cmbMediosPago.SelectedIndex == 0)
+            {
+                nombreTitularTouched = false;
+                validarNombreTitular();
+                estiloNombreTitular();
+
+            }
+            else if (cmbMediosPago.SelectedIndex == 1)
+            {
+                nombreTitularTouched = true;
+                validarNombreTitular();
+                estiloNombreTitular();
+            }
+        }
+
+        public void validarCvc()
+        {
+            if (maskedText3Value.Trim().Length < 3)
+            {
+                cvcValid = false;
+                return;
+            }
+
+            cvcValid = true;
+            return;
+        }
+
+        public void estiloCvc()
+        {
+            if (!cvcValid && cvcTouched)
+            {
+                label10.Visible = true;
+                label10.Text = "*Por favor ingrese un CVC valido";
+                label10.ForeColor = gestor.setErrorColor();
+
+                maskedTextBox3.BackColor = gestor.setErrorColor();
+            }
+            else
+            {
+                label10.Visible = false;
+                label10.Text = "";
+
+                maskedTextBox3.BackColor = gestor.clearErrorColor();
+            }
+        }
+
+        private void maskedTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            maskedText3Value = maskedTextBox3.Text.Trim();
+            validarCvc();
+            estiloCvc();
+        }
+
+        private void maskedTextBox3_Leave(object sender, EventArgs e)
+        {
+            cvcTouched = true;
+            validarCvc();
+            estiloCvc();
+        }
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            if (cmbMediosPago.SelectedIndex == 0)
+            {
+                if (!cantidadEfectivoValid)
+                {
+                    MessageBox.Show("Por favor ingrese un monto valido");
+                    maskedTextBox1.Focus();
+                    return;
+                }
+            }
+            else if (cmbMediosPago.SelectedIndex == 1)
+            {
+                if (!nroTarjetaValid)
+                {
+                    MessageBox.Show("Por favor ingrese un numero de tarjeta valido (Debe comenzar con 4 y tener al menos 12 digitos");
+                    maskedTextBox1.Focus();
+                    return;
+                }
+
+                if (!nombreTitularValid)
+                {
+                    MessageBox.Show("Por favor ingrese un nombre de titular valido");
+                    maskedTextBox2.Focus();
+                    return;
+                }
+
+                if (!cvcValid)
+                {
+                    MessageBox.Show("Por favor ingrese un codigo de seguridad valido");
+                    maskedTextBox3.Focus();
+                    return;
+                }
+            }
+
+            resetTxts();
+            MessageBox.Show("Pago procesado con exito!");
         }
     }
 }

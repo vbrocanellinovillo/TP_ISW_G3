@@ -32,18 +32,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbMediosPago = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,11 +73,13 @@
             this.cmbMediosPago.Location = new System.Drawing.Point(15, 77);
             this.cmbMediosPago.Name = "cmbMediosPago";
             this.cmbMediosPago.Size = new System.Drawing.Size(121, 21);
-            this.cmbMediosPago.TabIndex = 2;
+            this.cmbMediosPago.TabIndex = 1;
             this.cmbMediosPago.SelectedIndexChanged += new System.EventHandler(this.cmbMediosPago_SelectedIndexChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.maskedTextBox3);
             this.panel1.Controls.Add(this.label6);
@@ -91,15 +95,15 @@
             this.panel1.TabIndex = 3;
             this.panel1.Visible = false;
             // 
-            // maskedTextBox3
+            // label8
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(13, 207);
-            this.maskedTextBox3.Mask = "999";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(33, 20);
-            this.maskedTextBox3.TabIndex = 7;
-            this.maskedTextBox3.ValidatingType = typeof(int);
-            this.maskedTextBox3.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(135, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Visible = false;
             // 
             // label6
             // 
@@ -110,34 +114,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "label6";
             this.label6.Visible = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 145);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Visible = false;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(14, 88);
-            this.maskedTextBox2.Mask = "999999999999999999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(121, 20);
-            this.maskedTextBox2.TabIndex = 4;
-            this.maskedTextBox2.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(14, 26);
-            this.maskedTextBox1.Mask = "999999999999999999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(121, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
-            this.maskedTextBox1.Leave += new System.EventHandler(this.maskedTextBox1_Leave);
             // 
             // label5
             // 
@@ -173,7 +149,7 @@
             this.btnPagar.Location = new System.Drawing.Point(79, 399);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(104, 47);
-            this.btnPagar.TabIndex = 4;
+            this.btnPagar.TabIndex = 6;
             this.btnPagar.Text = "Procesar pago";
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
@@ -196,16 +172,66 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total";
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(135, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "*Numero de tarjeta invalido";
-            this.label8.Visible = false;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(141, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(53, 213);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 145);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(216, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.Visible = false;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(14, 88);
+            this.maskedTextBox2.Mask = "999999999999999999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(121, 20);
+            this.maskedTextBox2.TabIndex = 3;
+            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.maskedTextBox2.TextChanged += new System.EventHandler(this.maskedTextBox2_TextChanged);
+            this.maskedTextBox2.Leave += new System.EventHandler(this.maskedTextBox2_Leave);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(13, 207);
+            this.maskedTextBox3.Mask = "999";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBox3.TabIndex = 5;
+            this.maskedTextBox3.ValidatingType = typeof(int);
+            this.maskedTextBox3.Visible = false;
+            this.maskedTextBox3.TextChanged += new System.EventHandler(this.maskedTextBox3_TextChanged);
+            this.maskedTextBox3.Leave += new System.EventHandler(this.maskedTextBox3_Leave);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(14, 26);
+            this.maskedTextBox1.Mask = "999999999999999999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(121, 20);
+            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
+            this.maskedTextBox1.Leave += new System.EventHandler(this.maskedTextBox1_Leave);
             // 
             // frmPago
             // 
@@ -238,14 +264,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnPagar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

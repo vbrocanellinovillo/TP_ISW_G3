@@ -46,7 +46,7 @@
             this.txtCalle.Margin = new System.Windows.Forms.Padding(2);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(76, 20);
-            this.txtCalle.TabIndex = 0;
+            this.txtCalle.TabIndex = 1;
             // 
             // txtReferencia
             // 
@@ -55,7 +55,7 @@
             this.txtReferencia.Multiline = true;
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.Size = new System.Drawing.Size(175, 88);
-            this.txtReferencia.TabIndex = 2;
+            this.txtReferencia.TabIndex = 4;
             // 
             // cmbCiudades
             // 
@@ -122,7 +122,7 @@
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(108, 51);
-            this.btnNext.TabIndex = 9;
+            this.btnNext.TabIndex = 5;
             this.btnNext.Text = "Ir a direccion de entrega";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -133,7 +133,7 @@
             this.txtNro.Mask = "99999";
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(76, 20);
-            this.txtNro.TabIndex = 10;
+            this.txtNro.TabIndex = 2;
             this.txtNro.ValidatingType = typeof(int);
             // 
             // frmDireccion
