@@ -44,7 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +76,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.maskedTextBox3);
             this.panel1.Controls.Add(this.label6);
@@ -139,6 +137,7 @@
             this.maskedTextBox1.TabIndex = 3;
             this.maskedTextBox1.ValidatingType = typeof(int);
             this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
+            this.maskedTextBox1.Leave += new System.EventHandler(this.maskedTextBox1_Leave);
             // 
             // label5
             // 
@@ -201,22 +200,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(137, 29);
+            this.label8.Location = new System.Drawing.Point(135, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "*Numero de tarjeta invalido";
             this.label8.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(138, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "*Visa empieza con 4";
-            this.label9.Visible = false;
             // 
             // frmPago
             // 
@@ -258,6 +247,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
     }
 }

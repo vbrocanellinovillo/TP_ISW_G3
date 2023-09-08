@@ -15,6 +15,8 @@ namespace TP_ISW_G3.Interfaces
     {
 
         private gestorLoQueSea gestor;
+        private bool maskedText1Touched = false;
+        private string primerNumero = "";
 
         public frmPago(Control.gestorLoQueSea _gestorLoQueSea)
         {
@@ -42,7 +44,6 @@ namespace TP_ISW_G3.Interfaces
             maskedTextBox3.Visible = false;
 
             label8.Visible = false;
-            label9.Visible = false;
         }
 
         public void mostrarPagoTarjeta()
@@ -61,7 +62,6 @@ namespace TP_ISW_G3.Interfaces
             maskedTextBox3.Visible = true;
 
             label8.Visible = false;
-            label9.Visible = false;
         }
 
         private void cmbMediosPago_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,22 +91,18 @@ namespace TP_ISW_G3.Interfaces
         }
 
         
-
         public void validarNumeroTarjeta(string primerNumero)
         {
-            if (primerNumero != "4")
+            if (primerNumero != "4" && maskedText1Touched)
             {
                 label8.Visible = true;
-                label9.Visible = true;
                 label8.ForeColor = gestor.setErrorColor();
-                label9.ForeColor = gestor.setErrorColor();
 
                 maskedTextBox1.BackColor = gestor.setErrorColor();
             }
             else
             {
                 label8.Visible = false;
-                label9.Visible = false;
 
                 maskedTextBox1.BackColor = gestor.clearErrorColor();
             }
@@ -130,7 +126,6 @@ namespace TP_ISW_G3.Interfaces
 
             } else if (cmbMediosPago.SelectedIndex == 1)
             {
-                string primerNumero = "";
 
                 if (maskedTextBox1.Text.Trim().Length > 0)
                 {
@@ -139,6 +134,12 @@ namespace TP_ISW_G3.Interfaces
 
                 validarNumeroTarjeta(primerNumero);
             }
+        }
+
+        private void maskedTextBox1_Leave(object sender, EventArgs e)
+        {
+            maskedText1Touched = true;
+            validarNumeroTarjeta(primerNumero);
         }
     }
 }
