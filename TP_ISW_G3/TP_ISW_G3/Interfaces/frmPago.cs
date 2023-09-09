@@ -145,7 +145,7 @@ namespace TP_ISW_G3.Interfaces
                 return;
             } else
             {
-                MessageBox.Show("El monto ingresado no es válido. Por favor, ingrese un número válido.");
+                estiloCantidadEfectivo();
             }
 
         }
@@ -232,7 +232,7 @@ namespace TP_ISW_G3.Interfaces
                     }
                     else
                     {
-                        MessageBox.Show("El monto ingresado no es válido. Por favor, ingrese un número válido.");
+                        estiloCantidadEfectivo();
                     }
                 }
 
@@ -309,7 +309,6 @@ namespace TP_ISW_G3.Interfaces
 
             if (cmbMediosPago.SelectedIndex == 1)
             {
-                // Validar nombre titular
                 validarNombreTitular();
                 estiloNombreTitular();
             }
@@ -383,6 +382,8 @@ namespace TP_ISW_G3.Interfaces
                 if (!cantidadEfectivoValid)
                 {
                     MessageBox.Show("Por favor ingrese un monto valido");
+                    cantidadEfectivoTouched = true;
+                    estiloCantidadEfectivo();
                     maskedTextBox1.Focus();
                     return;
                 }
@@ -392,6 +393,8 @@ namespace TP_ISW_G3.Interfaces
                 if (!nroTarjetaValid)
                 {
                     MessageBox.Show("Por favor ingrese un numero de tarjeta valido (Debe comenzar con 4 y tener al menos 12 digitos");
+                    nrtoTarjetaTouched = true;
+                    estiloNumeroTarjeta();
                     maskedTextBox1.Focus();
                     return;
                 }
@@ -399,6 +402,8 @@ namespace TP_ISW_G3.Interfaces
                 if (!nombreTitularValid)
                 {
                     MessageBox.Show("Por favor ingrese un nombre de titular valido");
+                    nombreTitularTouched = true;
+                    estiloNombreTitular();
                     maskedTextBox2.Focus();
                     return;
                 }
@@ -406,6 +411,8 @@ namespace TP_ISW_G3.Interfaces
                 if (!cvcValid)
                 {
                     MessageBox.Show("Por favor ingrese un codigo de seguridad valido");
+                    cvcTouched = true;
+                    estiloCvc();
                     maskedTextBox3.Focus();
                     return;
                 }
