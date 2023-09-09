@@ -77,7 +77,12 @@ namespace TP_ISW_G3.Control
 
         public Color setErrorColor()
         {
-            return Color.FromArgb(0xaa, 0x0b, 0x20);
+            return Color.FromArgb(0xfb, 0xe8, 0xd2);
+        }
+
+        public Color setErrorText()
+        {
+            return Color.FromArgb(0xb4, 0x0e, 0x0e);
         }
 
         public Color clearErrorColor()

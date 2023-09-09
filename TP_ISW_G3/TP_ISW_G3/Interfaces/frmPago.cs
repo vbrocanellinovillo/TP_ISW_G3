@@ -61,7 +61,7 @@ namespace TP_ISW_G3.Interfaces
             dateTimePicker1.Visible = false;
             maskedTextBox3.Visible = false;
 
-            label8.Visible = false;
+            label11.Visible = false;
         }
 
         public void mostrarPagoTarjeta()
@@ -79,7 +79,7 @@ namespace TP_ISW_G3.Interfaces
             label6.Text = "Codigo de seguridad";
             maskedTextBox3.Visible = true;
 
-            label8.Visible = false;
+            label11.Visible = false;
         }
 
         public void resetTxts()
@@ -87,6 +87,10 @@ namespace TP_ISW_G3.Interfaces
             maskedTextBox1.Text = "";
             maskedTextBox2.Text = "";
             maskedTextBox3.Text = "";
+
+            maskedText1Value = "";
+            maskedText2Value = "";
+            maskedText3Value = "";
 
             nroTarjetaValid = false;
             nrtoTarjetaTouched = false;
@@ -97,13 +101,17 @@ namespace TP_ISW_G3.Interfaces
             cvcValid = false;
             cvcTouched = false;
 
-            label8.Visible = false;
-            label9.Visible = false;
-            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
 
             maskedTextBox1.BackColor = gestor.clearErrorColor();
             maskedTextBox2.BackColor = gestor.clearErrorColor();
             maskedTextBox3.BackColor = gestor.clearErrorColor();
+
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
         }
 
         private void cmbMediosPago_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,6 +135,10 @@ namespace TP_ISW_G3.Interfaces
         {
             cargarCombo();
             lblTotal.Text = gestor.devolverTotal();
+
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
         }
 
 
@@ -145,7 +157,7 @@ namespace TP_ISW_G3.Interfaces
                 return;
             } else
             {
-                estiloCantidadEfectivo();
+                cantidadEfectivoValid = false;
             }
 
         }
@@ -154,15 +166,15 @@ namespace TP_ISW_G3.Interfaces
         {
             if (!cantidadEfectivoValid && cantidadEfectivoTouched)
             {
-                label8.Visible = true;
-                label8.Text = "Ingrese un monto mayor o igual al total";
-                label8.ForeColor = gestor.setErrorColor();
-
+                label11.Visible = true;
+                label11.Text = "*Por favor ingrese un monto mayor o igual al total";
+                label11.ForeColor = gestor.setErrorText();
+                    
                 maskedTextBox1.BackColor = gestor.setErrorColor();
             }
             else
             {
-                label8.Visible = false;
+                label11.Visible = false;
 
                 maskedTextBox1.BackColor = gestor.clearErrorColor();
             }
@@ -191,15 +203,15 @@ namespace TP_ISW_G3.Interfaces
         {
             if (!nroTarjetaValid && nrtoTarjetaTouched)
             {
-                label8.Visible = true;
-                label8.Text = "*Numero de tarjeta invalido";
-                label8.ForeColor = gestor.setErrorColor();
+                label11.Visible = true;
+                label11.Text = "*Numero de tarjeta invalido";
+                label11.ForeColor = gestor.setErrorText();
 
                 maskedTextBox1.BackColor = gestor.setErrorColor();
             }
             else
             {
-                label8.Visible = false;
+                label11.Visible = false;
 
                 maskedTextBox1.BackColor = gestor.clearErrorColor();
             }
@@ -232,7 +244,7 @@ namespace TP_ISW_G3.Interfaces
                     }
                     else
                     {
-                        estiloCantidadEfectivo();
+                        cantidadEfectivoValid = false;
                     }
                 }
 
@@ -288,16 +300,16 @@ namespace TP_ISW_G3.Interfaces
         {
             if (!nombreTitularValid && nombreTitularTouched)
             {
-                label9.Visible = true;
-                label9.Text = "*Por favor ingrese un nombre";
-                label9.ForeColor = gestor.setErrorColor();
+                label12.Visible = true;
+                label12.Text = "*Por favor ingrese un nombre";
+                label12.ForeColor = gestor.setErrorText();
 
                 maskedTextBox2.BackColor = gestor.setErrorColor();
             }
             else
             {
-                label9.Visible = false;
-                label9.Text = "";
+                label12.Visible = false;
+                label12.Text = "";
 
                 maskedTextBox2.BackColor = gestor.clearErrorColor();
             }
@@ -347,16 +359,16 @@ namespace TP_ISW_G3.Interfaces
         {
             if (!cvcValid && cvcTouched)
             {
-                label10.Visible = true;
-                label10.Text = "*Por favor ingrese un CVC valido";
-                label10.ForeColor = gestor.setErrorColor();
+                label13.Visible = true;
+                label13.Text = "*Por favor ingrese un codigo de seguridad valido";
+                label13.ForeColor = gestor.setErrorText();
 
                 maskedTextBox3.BackColor = gestor.setErrorColor();
             }
             else
             {
-                label10.Visible = false;
-                label10.Text = "";
+                label13.Visible = false;
+                label13.Text = "";
 
                 maskedTextBox3.BackColor = gestor.clearErrorColor();
             }

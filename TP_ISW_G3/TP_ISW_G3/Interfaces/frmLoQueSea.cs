@@ -15,6 +15,16 @@ namespace TP_ISW_G3.Interfaces
     public partial class frmLoQueSea : Form
     {
         gestorLoQueSea gestor;
+
+        private string descriptionValue;
+        private string priceValue;
+
+        private bool descriptionValid;
+        private bool descriptionTouched;
+
+        private bool priceValid;
+        private bool priceTouched;
+
         public frmLoQueSea(gestorLoQueSea gestorLoQueSea)
         {
             InitializeComponent();
@@ -55,16 +65,20 @@ namespace TP_ISW_G3.Interfaces
 
         private void btnDireccion_Click(object sender, EventArgs e)
         {
-            if(txtDescripcion.Text.Trim() == "")
+            if(!descriptionValid)
             {
-                MessageBox.Show("Falta completar la descripcion");
+                MessageBox.Show("Por favor completar la descripcion");
+                descriptionTouched = true;
+                estiloDescripcion();
                 txtDescripcion.Focus();
                 return;
             }
 
-            if (txtPrecio.Text.Trim() == "")
+            if (!priceValid)
             {
-                MessageBox.Show("Falta el precio");
+                MessageBox.Show("Por favor ingresar un precio valido");
+                priceTouched = true;
+                estiloPrecio();
                 txtPrecio.Focus();
                 return;
             }
@@ -74,15 +88,139 @@ namespace TP_ISW_G3.Interfaces
             if (double.TryParse(txtPrecio.Text, out precio))
             {
                 gestor.cargarTotal(precio);
-            } else
+            }
+            else
             {
-                MessageBox.Show("El precio ingresado no es válido. Por favor, ingrese un número válido.");
-                precio = 0.0;
+                MessageBox.Show("Por favor ingresar un precio valido");
+                priceTouched = true;
+                estiloPrecio();
                 txtPrecio.Focus();
                 return;
             }
 
+            resetTxts();
             gestor.crearFormDireccionComercio("Dirección Comercio");
+        }
+
+        public void validarDescripcion()
+        {
+            if (descriptionValue.Trim() == "" )
+            {
+                descriptionValid = false;
+                return;
+            }
+
+            descriptionValid = true;
+            return;
+        }
+
+        public void estiloDescripcion()
+        {
+            if (!descriptionValid && descriptionTouched)
+            {
+                label2.Visible = true;
+                label2.Text = "*Por favor ingrese una descripción";
+                label2.ForeColor = gestor.setErrorText();
+
+                txtDescripcion.BackColor = gestor.setErrorColor();
+            } else
+            {
+                label2.Visible = false;
+
+                txtDescripcion.BackColor = gestor.clearErrorColor();
+            }
+        }
+
+        public void validarPrecio()
+        {
+
+            if (priceValue.Trim().Length == 0)
+            {
+                priceValid = false;
+                return;
+            }
+
+            double precio;
+            if (double.TryParse(priceValue, out precio))
+            {
+                priceValid = true;
+                return;
+            } else
+            {
+                priceValid = false;
+            }
+
+        }
+
+        public void estiloPrecio()
+        {
+            if (!priceValid && priceTouched)
+            {
+                label3.Visible = true;
+                label3.Text = "*Por favor ingrese un precio valido";
+                label3.ForeColor = gestor.setErrorText();
+
+                txtPrecio.BackColor = gestor.setErrorColor();
+            } else
+            {
+                label3.Visible = false;
+
+                txtPrecio.BackColor = gestor.clearErrorColor();
+            }
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            descriptionValue = txtDescripcion.Text;
+            validarDescripcion();
+            estiloDescripcion();
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            priceValue = txtPrecio.Text;
+            validarPrecio();
+            estiloPrecio();
+        }
+
+        private void txtDescripcion_Leave(object sender, EventArgs e)
+        {
+            descriptionTouched = true;
+            validarDescripcion();
+            estiloDescripcion();
+        }
+
+        private void txtPrecio_Leave(object sender, EventArgs e)
+        {
+            priceTouched = true;
+            validarPrecio();
+            estiloPrecio();
+        }
+
+        public void resetTxts()
+        {
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "";
+
+            descriptionValue = "";
+            priceValue = "";
+
+            txtDescripcion.BackColor = gestor.clearErrorColor();
+            txtPrecio.BackColor = gestor.clearErrorColor();
+
+            descriptionValid = false;
+            descriptionTouched = false;
+
+            priceValid = false;
+            priceTouched = false;
+
+            label2.Visible = false;
+            label3.Visible = false;
+        }
+
+        private void frmLoQueSea_Load(object sender, EventArgs e)
+        {
+            resetTxts();
         }
     }
 }
