@@ -16,6 +16,7 @@ namespace TP_ISW_G3.Interfaces
     {
 
         private gestorLoQueSea gestor;
+
         private string maskedText1Value = "";
         private string maskedText2Value = "";
         private string maskedText3Value = "";
@@ -134,11 +135,10 @@ namespace TP_ISW_G3.Interfaces
         private void frmPago_Load(object sender, EventArgs e)
         {
             cargarCombo();
+            // Agregarle el signo $ a eso despues sin que rompa el parseo despues
             lblTotal.Text = gestor.devolverTotal();
 
-            label8.Visible = false;
-            label9.Visible = false;
-            label10.Visible = false;
+            resetTxts();
         }
 
 

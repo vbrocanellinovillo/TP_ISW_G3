@@ -36,7 +36,7 @@
             // btnLoQueSea
             // 
             this.btnLoQueSea.Location = new System.Drawing.Point(105, 168);
-            this.btnLoQueSea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoQueSea.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoQueSea.Name = "btnLoQueSea";
             this.btnLoQueSea.Size = new System.Drawing.Size(116, 60);
             this.btnLoQueSea.TabIndex = 0;
@@ -72,9 +72,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoQueSea);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicio";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DeliverEat";
             this.ResumeLayout(false);
             this.PerformLayout();
 

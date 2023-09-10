@@ -74,7 +74,7 @@
             // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(23, 229);
+            this.btnImagen.Location = new System.Drawing.Point(23, 243);
             this.btnImagen.Margin = new System.Windows.Forms.Padding(2);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(103, 48);
@@ -89,7 +89,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(23, 281);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 295);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 146);
@@ -98,7 +98,7 @@
             // 
             // btnDireccion
             // 
-            this.btnDireccion.Location = new System.Drawing.Point(80, 431);
+            this.btnDireccion.Location = new System.Drawing.Point(105, 455);
             this.btnDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnDireccion.Name = "btnDireccion";
             this.btnDireccion.Size = new System.Drawing.Size(116, 54);
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 496);
+            this.ClientSize = new System.Drawing.Size(332, 520);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPrecio);
@@ -163,7 +163,8 @@
             this.Controls.Add(this.txtDescripcion);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLoQueSea";
-            this.Text = "frmLoQueSea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pedido \"Lo Que Sea\"";
             this.Load += new System.EventHandler(this.frmLoQueSea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
