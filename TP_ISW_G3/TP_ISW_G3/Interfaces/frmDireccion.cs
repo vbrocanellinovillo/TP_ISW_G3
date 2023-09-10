@@ -24,6 +24,9 @@ namespace TP_ISW_G3.Interfaces
 
         private bool numberValid;
         private bool numberTouched;
+
+        private bool cmbValid;
+        private bool cmbTouched;
         
 
         public frmDireccion(Control.gestorLoQueSea gestorLoQueSea, string titulo)
@@ -61,6 +64,9 @@ namespace TP_ISW_G3.Interfaces
             numberValid = false;
 
             cmbCiudades.SelectedIndex = -1;
+            cmbValid = false;
+            cmbTouched = false;
+
             txtReferencia.Text = "";
 
             txtCalle.BackColor = gestor.clearErrorColor();
@@ -103,9 +109,12 @@ namespace TP_ISW_G3.Interfaces
             }
 
 
-            if (cmbCiudades.SelectedItem == null)
+            if (!cmbValid)
             {
                 MessageBox.Show("Por favor, selecciona una ciudad.");
+                cmbTouched = true;
+                estiloCombo();
+                cmbCiudades.Focus();
                 return null;
             }
 
@@ -231,6 +240,50 @@ namespace TP_ISW_G3.Interfaces
             numberTouched = true;
             validarNumero();
             estiloNumero();
+        }
+
+        private void validarCombo()
+        {
+            if (cmbCiudades.SelectedIndex == -1) 
+            {
+                cmbValid = false;
+                return;
+            }
+
+            cmbValid = true;
+            return;
+        }
+
+        private void estiloCombo()
+        {
+            if (!cmbValid && cmbTouched)
+            {
+                label7.Visible = true;
+                label7.Text = "*Por favor seleccione una ciudad";
+                label7.ForeColor = gestor.setErrorText();
+
+                cmbCiudades.BackColor = gestor.setErrorColor();
+            }
+
+            else
+            {
+                label7.Visible = false;
+
+                cmbCiudades.BackColor = gestor.clearErrorColor();
+            }
+        }
+
+        private void cmbCiudades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            validarCombo();
+            estiloCombo();
+        }
+
+        private void cmbCiudades_Leave(object sender, EventArgs e)
+        {
+            cmbTouched = true;
+            validarCombo();
+            estiloCombo();
         }
     }
 }

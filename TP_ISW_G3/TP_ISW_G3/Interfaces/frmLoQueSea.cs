@@ -17,6 +17,8 @@ namespace TP_ISW_G3.Interfaces
         gestorLoQueSea gestor;
 
         private string descriptionValue;
+        
+        // Falta ver como hacer con el formato del precio
         private string priceValue;
 
         private bool descriptionValid;

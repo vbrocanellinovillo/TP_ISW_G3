@@ -37,9 +37,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDireccion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,16 +117,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Precio: *";
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(23, 180);
-            this.txtPrecio.Mask = "999999999999999999";
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(123, 20);
-            this.txtPrecio.TabIndex = 2;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
-            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -146,6 +136,16 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "label3";
             this.label3.Visible = false;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(23, 180);
+            this.txtPrecio.Mask = "999999999999999999";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(123, 20);
+            this.txtPrecio.TabIndex = 2;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // frmLoQueSea
             // 
@@ -183,8 +183,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDireccion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
     }
 }

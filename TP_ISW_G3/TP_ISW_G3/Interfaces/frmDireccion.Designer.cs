@@ -70,6 +70,8 @@
             this.cmbCiudades.Name = "cmbCiudades";
             this.cmbCiudades.Size = new System.Drawing.Size(92, 21);
             this.cmbCiudades.TabIndex = 3;
+            this.cmbCiudades.SelectedIndexChanged += new System.EventHandler(this.cmbCiudades_SelectedIndexChanged);
+            this.cmbCiudades.Leave += new System.EventHandler(this.cmbCiudades_Leave);
             // 
             // label1
             // 
