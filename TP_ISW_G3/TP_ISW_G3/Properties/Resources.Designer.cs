@@ -123,6 +123,46 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnDirEntrega {
+            get {
+                object obj = ResourceManager.GetObject("btnDirEntrega", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnIrPago {
+            get {
+                object obj = ResourceManager.GetObject("btnIrPago", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap direccionComercio {
+            get {
+                object obj = ResourceManager.GetObject("direccionComercio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap direccionEntrega {
+            get {
+                object obj = ResourceManager.GetObject("direccionEntrega", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap formloquesea {
             get {
                 object obj = ResourceManager.GetObject("formloquesea", resourceCulture);

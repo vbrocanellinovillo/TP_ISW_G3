@@ -14,6 +14,7 @@ namespace TP_ISW_G3.Interfaces
     public partial class frmDireccion : Form
     {
         private gestorLoQueSea gestor;
+        private string titulo;
 
         private string streetValue;
 
@@ -29,22 +30,24 @@ namespace TP_ISW_G3.Interfaces
         private bool cmbTouched;
         
 
-        public frmDireccion(Control.gestorLoQueSea gestorLoQueSea, string titulo)
+        public frmDireccion(Control.gestorLoQueSea gestorLoQueSea, string _titulo)
         {
             InitializeComponent();
             gestor = gestorLoQueSea;
 
             // Cambia el titulo y el texto del boton según de donde se llame al constructor
             // (cambia el valor de titulo y con ese se hace la validación)
-            lblTitulo.Text = titulo;
+
+            titulo = _titulo;
 
             if (titulo == "Dirección Comercio")
             {
-                btnNext.Text = "Ir a dirección de entrega";
-                this.BackgroundImage = 
+                this.BackgroundImage = Properties.Resources.direccionComercio;
+                btnNext.BackgroundImage = Properties.Resources.btnDirEntrega;
             } else
             {
-                btnNext.Text = "Ir a pago";
+                this.BackgroundImage = Properties.Resources.direccionEntrega;
+                btnNext.BackgroundImage = Properties.Resources.btnIrPago;
             }
         }
 
@@ -147,7 +150,7 @@ namespace TP_ISW_G3.Interfaces
                 // Según la dirección que estaba cargando ver cual es el siguiente form
 
                 // Si era la dirección de comercio paso despues al form de la dirección de entrega
-                if (lblTitulo.Text == "Dirección Comercio")
+                if (titulo == "Dirección Comercio")
                 {
                     gestor.cargarDireccionComercio(direccion);
                     gestor.crearFormDireccionEntrega("Direccion Entrega");
