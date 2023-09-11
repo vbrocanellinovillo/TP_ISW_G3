@@ -28,7 +28,8 @@ namespace TP_ISW_G3.Interfaces
 
         private bool cmbValid;
         private bool cmbTouched;
-        
+
+        private int seleccionCiudad;
 
         public frmDireccion(Control.gestorLoQueSea gestorLoQueSea, string _titulo)
         {
@@ -152,6 +153,7 @@ namespace TP_ISW_G3.Interfaces
                 // Si era la dirección de comercio paso despues al form de la dirección de entrega
                 if (titulo == "Dirección Comercio")
                 {
+                    seleccionCiudad = cmbCiudades.SelectedIndex;
                     gestor.cargarDireccionComercio(direccion);
                     gestor.crearFormDireccionEntrega("Direccion Entrega");
                 }
@@ -278,8 +280,22 @@ namespace TP_ISW_G3.Interfaces
             if (cmbCiudades.SelectedIndex == -1) 
             {
                 cmbValid = false;
-                label7.Text = "*Por favor seleccione una ciudad";
+                label7.Text = "*ERROR EN LA CIUDAD"; // VER QUE PONER ACA
                 return;
+            }
+
+            if(titulo== "Direccion Entrega")
+            {
+                if(cmbCiudades.SelectedIndex == seleccionCiudad)
+                {
+                    cmbValid = true;
+                    return;
+                }
+                else
+                {
+                    cmbValid = false;
+                    return;
+                }
             }
 
             cmbValid = true;

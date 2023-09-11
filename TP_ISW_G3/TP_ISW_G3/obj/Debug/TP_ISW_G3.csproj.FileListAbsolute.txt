@@ -10,7 +10,6 @@ C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.CoreCompileInputs.cache
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.exe
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.pdb
-C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccionComercio.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.exe.config
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.exe
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.pdb
@@ -25,3 +24,7 @@ F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\D
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.pdb
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccion.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmPago.resources
+C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccion.resources
+C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmPago.resources
+C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmEntrega.resources
+C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources

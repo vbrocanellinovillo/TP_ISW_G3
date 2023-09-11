@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_ISW_G3.Control;
+using System.Globalization;
 
 namespace TP_ISW_G3.Interfaces
 {
@@ -166,6 +168,8 @@ namespace TP_ISW_G3.Interfaces
                 priceValid = false;
             }
 
+
+
         }
 
         public void estiloPrecio()
@@ -242,6 +246,35 @@ namespace TP_ISW_G3.Interfaces
         private void frmLoQueSea_Load(object sender, EventArgs e)
         {
             resetTxts();
+                // Configurar la cultura personalizada para el TextBox
+                CultureInfo customCulture = new CultureInfo("en-US"); // Punto como separador de miles, coma como separador decimal
+                //textBox1.Culture = customCulture;
+            
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && (sender as TextBox).Text.Contains(","))
+            {
+                e.Handled = true;
+            }
+
         }
     }
-}
+    }
+    
+    
+    
+    
+

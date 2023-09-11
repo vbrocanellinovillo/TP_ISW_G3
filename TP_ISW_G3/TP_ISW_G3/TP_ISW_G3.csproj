@@ -48,11 +48,23 @@
   <ItemGroup>
     <Compile Include="Entidades\Direccion.cs" />
     <Compile Include="Control\gestorLoQueSea.cs" />
+    <Compile Include="Interfaces\frmDatosFechaHora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmDatosFechaHora.Designer.cs">
+      <DependentUpon>frmDatosFechaHora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\frmDireccion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces\frmDireccion.Designer.cs">
       <DependentUpon>frmDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmEntrega.Designer.cs">
+      <DependentUpon>frmEntrega.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\frmInicio.cs">
       <SubType>Form</SubType>
@@ -74,8 +86,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interfaces\frmDatosFechaHora.resx">
+      <DependentUpon>frmDatosFechaHora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmDireccion.resx">
       <DependentUpon>frmDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmEntrega.resx">
+      <DependentUpon>frmEntrega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
@@ -144,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\img\btnIrPago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20230911_172230_0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20230911_093828_0001.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,6 +15,8 @@ namespace TP_ISW_G3.Control
         private frmDireccion frmDireccionComercio;
         private frmDireccion frmDireccionEntrega;
         private frmPago frmPago;
+        private frmEntrega frmEntrega;
+        private frmDatosFechaHora frmDatosFechaHora;
 
         private double total;
         private Direccion direccionComercio;
@@ -88,6 +90,20 @@ namespace TP_ISW_G3.Control
         public Color clearErrorColor()
         {
             return Color.FromArgb(0xff, 0xff, 0xff);
+        }
+
+        public void crearFormEntrega()
+        {
+            frmPago.Hide();
+            frmEntrega = new frmEntrega(this);
+            frmEntrega.Show();
+        }
+
+        public void crearFormFechaHora()
+        {
+            frmEntrega.Hide();
+            frmDatosFechaHora = new frmDatosFechaHora(this);
+            frmDatosFechaHora.Show();
         }
     }
 }

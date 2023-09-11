@@ -591,6 +591,8 @@ namespace TP_ISW_G3.Interfaces
             // Si llego hasta aca paso todas las validaciones
             resetTxts();
             MessageBox.Show("Pago procesado con exito!");
+            gestor.crearFormEntrega();
+
         }
 
     }
