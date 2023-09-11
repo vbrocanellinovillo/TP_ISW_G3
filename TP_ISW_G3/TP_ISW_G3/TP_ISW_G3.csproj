@@ -169,5 +169,35 @@
   <ItemGroup>
     <None Include="Resources\20230911_093828_0001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\20230911_175442_0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btnAntesPosible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btnFechaYHora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formPago1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formPagoEfectivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formPagoTarjeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\panelTarjeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\panelEfectivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\panelEfectivo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\panelEfectivo3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

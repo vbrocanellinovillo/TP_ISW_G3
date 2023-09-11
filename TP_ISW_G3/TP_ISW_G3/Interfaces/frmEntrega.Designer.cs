@@ -34,36 +34,47 @@
             // 
             // btnAntes
             // 
-            this.btnAntes.Location = new System.Drawing.Point(69, 54);
+            this.btnAntes.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btnAntesPosible;
+            this.btnAntes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAntes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAntes.FlatAppearance.BorderSize = 0;
+            this.btnAntes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAntes.Location = new System.Drawing.Point(88, 273);
+            this.btnAntes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAntes.Name = "btnAntes";
-            this.btnAntes.Size = new System.Drawing.Size(127, 80);
+            this.btnAntes.Size = new System.Drawing.Size(125, 65);
             this.btnAntes.TabIndex = 0;
-            this.btnAntes.Text = "Lo antes posible";
             this.btnAntes.UseVisualStyleBackColor = true;
             this.btnAntes.Click += new System.EventHandler(this.btnAntes_Click);
             // 
             // btnFechaHora
             // 
-            this.btnFechaHora.Location = new System.Drawing.Point(69, 149);
+            this.btnFechaHora.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btnFechaYHora;
+            this.btnFechaHora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechaHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechaHora.FlatAppearance.BorderSize = 0;
+            this.btnFechaHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechaHora.Location = new System.Drawing.Point(88, 352);
+            this.btnFechaHora.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechaHora.Name = "btnFechaHora";
-            this.btnFechaHora.Size = new System.Drawing.Size(127, 130);
+            this.btnFechaHora.Size = new System.Drawing.Size(125, 64);
             this.btnFechaHora.TabIndex = 1;
-            this.btnFechaHora.Text = "Selecciona fecha y hora";
             this.btnFechaHora.UseVisualStyleBackColor = true;
             this.btnFechaHora.Click += new System.EventHandler(this.btnFechaHora_Click);
             // 
             // frmEntrega
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources._20230911_093828_0001;
+            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources._20230911_175442_0001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(276, 488);
+            this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.btnFechaHora);
             this.Controls.Add(this.btnAntes);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEntrega";
-            this.Text = "frmEntrega";
+            this.Text = "Entrega";
             this.ResumeLayout(false);
 
         }

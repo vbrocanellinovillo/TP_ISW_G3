@@ -28,3 +28,5 @@ C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfa
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmPago.resources
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmEntrega.resources
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources
+F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources
+F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmEntrega.resources

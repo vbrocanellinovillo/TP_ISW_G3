@@ -280,7 +280,7 @@ namespace TP_ISW_G3.Interfaces
             if (cmbCiudades.SelectedIndex == -1) 
             {
                 cmbValid = false;
-                label7.Text = "*ERROR EN LA CIUDAD"; // VER QUE PONER ACA
+                label7.Text = "*Por favor seleccione una ciudad";
                 return;
             }
 
@@ -294,6 +294,7 @@ namespace TP_ISW_G3.Interfaces
                 else
                 {
                     cmbValid = false;
+                    label7.Text = "*Por favor seleccione la ciudad correcta";
                     return;
                 }
             }

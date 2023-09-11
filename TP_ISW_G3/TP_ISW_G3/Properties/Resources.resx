@@ -124,43 +124,76 @@
   <data name="principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btncIrDireccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\btncIrDireccion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="panelEfectivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\panelEfectivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnIrPago" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\btnIrPago.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\btn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="20230911_103448_0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\20230911_103448_0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="panelEfectivo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\panelEfectivo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="direccionEntrega" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\direccionEntrega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\btn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formPagoEfectivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\formPagoEfectivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formPago1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\formPago1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20230911_103448_0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\20230911_103448_0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnIrPago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\btnIrPago.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panelEfectivo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\panelEfectivo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\btn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panelTarjeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\panelTarjeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formPagoTarjeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\formPagoTarjeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnCargarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\btnCargarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20230911_172230_0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20230911_172230_0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnDirEntrega" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\btnDirEntrega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnAntesPosible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\btnAntesPosible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="direccionComercio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\direccionComercio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20230911_093828_0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20230911_093828_0001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="formloquesea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\formloquesea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncIrDireccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\btncIrDireccion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="formloquesea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\formloquesea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20230911_172230_0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20230911_172230_0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20230911_175442_0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\20230911_175442_0001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20230911_093828_0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20230911_093828_0001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnFechaYHora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\btnFechaYHora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formLoQueSea (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\formLoQueSea (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

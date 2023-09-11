@@ -61,12 +61,8 @@ namespace TP_ISW_G3.Interfaces
         // Ajustar labels y textboxs según la selección del combo
         public void mostrarPagoEfectivo()
         {
-            label3.Text = "Monto con el que se va a pagar";
-            label4.Text = "Vuelto a recibir";
+            panel1.BackgroundImage = Properties.Resources.panelEfectivo3;
             maskedTextBox2.Enabled = false;
-
-            label5.Visible = false;
-            label6.Visible = false;
 
             maskedTextBox4.Visible = false;
             maskedTextBox3.Visible = false;
@@ -77,17 +73,12 @@ namespace TP_ISW_G3.Interfaces
 
         public void mostrarPagoTarjeta()
         {
-            label3.Text = "Número de tarjeta";
-            label4.Text = "Nombre del titular";
+            panel1.BackgroundImage = Properties.Resources.panelTarjeta;
             maskedTextBox2.Enabled = true;
             maskedTextBox2.Mask = "";
 
-            label5.Visible = true;
-            label5.Text = "Fecha vencimiento (MM/AAAA)";
             maskedTextBox4.Visible = true;
 
-            label6.Visible = true;
-            label6.Text = "Codigo de seguridad";
             maskedTextBox3.Visible = true;
 
             label11.Visible = false;

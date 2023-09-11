@@ -35,25 +35,28 @@
             // 
             // dtpFechaHora
             // 
-            this.dtpFechaHora.Location = new System.Drawing.Point(48, 93);
+            this.dtpFechaHora.Location = new System.Drawing.Point(36, 76);
+            this.dtpFechaHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaHora.Name = "dtpFechaHora";
-            this.dtpFechaHora.Size = new System.Drawing.Size(200, 22);
+            this.dtpFechaHora.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaHora.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 62);
+            this.label1.Location = new System.Drawing.Point(40, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 16);
+            this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cuando lo queresssssss";
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(103, 205);
+            this.btnConfirmar.Location = new System.Drawing.Point(77, 167);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(124, 95);
+            this.btnConfirmar.Size = new System.Drawing.Size(93, 77);
             this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -61,12 +64,13 @@
             // 
             // frmDatosFechaHora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 450);
+            this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpFechaHora);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDatosFechaHora";
             this.Text = "frmDatosFechaHora";
             this.ResumeLayout(false);
