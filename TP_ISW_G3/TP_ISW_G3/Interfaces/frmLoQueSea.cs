@@ -56,27 +56,28 @@ namespace TP_ISW_G3.Interfaces
                 {
                     // Formatear el valor con punto como separador de miles y coma como separador decimal
                     textBox1.Text = value.ToString("N2");
-                    textBox1.SelectionStart = textBox1.Text.Length; // Colocar el cursor al final del TextBox
+                    //textBox1.SelectionStart = textBox1.Text.Length; // Colocar el cursor al final del TextBox
                 }
             }
         }
 
         private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+            //char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
 
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                if ((e.KeyChar == '-' && textBox1.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
-                {
-                    // Aceptar un guión para números negativos o un punto para decimales
-                    allowDot = !allowDot;
-                }
-                else
-                {
-                    e.Handled = true; // Ignorar otros caracteres
-                }
-            }
+            //if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            //{
+            //    if ((e.KeyChar == '-' && textBox1.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
+            //    {
+            //        // Aceptar un guión para números negativos o un punto para decimales
+            //        allowDot = !allowDot;
+            //    }
+            //    else
+            //    {
+            //        e.Handled = true; // Ignorar otros caracteres
+            //    }
+            //}
+
         }
 
 
@@ -290,7 +291,7 @@ namespace TP_ISW_G3.Interfaces
 
         private void frmLoQueSea_Load(object sender, EventArgs e)
         {
-            resetTxts();
+                resetTxts();
                 // Configurar la cultura personalizada para el TextBox
                 CultureInfo customCulture = new CultureInfo("en-US"); // Punto como separador de miles, coma como separador decimal
                 //textBox1.Culture = customCulture;

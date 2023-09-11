@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\Direccion.cs" />
+    <Compile Include="Entidades\direccion.cs" />
     <Compile Include="Control\gestorLoQueSea.cs" />
     <Compile Include="Interfaces\frmDatosFechaHora.cs">
       <SubType>Form</SubType>
@@ -201,6 +201,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\img\formLoQueSea %282%29 - copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formFechaHora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formLoQueSea3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btnTipoEntrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btnConfirmarPedido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -95,7 +95,7 @@ namespace TP_ISW_G3.Interfaces
 
         // Cargar dirección ingresada
         // Se hacen las validaciones para ver si se puede cargar la dirección
-        public Direccion validarCampos()
+        public direccion validarCampos()
         {
             string nombreCalle = txtCalle.Text.Trim();
 
@@ -137,13 +137,13 @@ namespace TP_ISW_G3.Interfaces
             string referencia = txtReferencia.Text.Trim();
             string ciudad = cmbCiudades.SelectedItem.ToString();
 
-            return new Direccion(nombreCalle, numero, ciudad, referencia);
+            return new direccion(nombreCalle, numero, ciudad, referencia);
         }
 
         // Evento click en el boton
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Direccion direccion = validarCampos();
+            direccion direccion = validarCampos();
 
             // Si la dirección es null es porque no paso alguna validación
             if (direccion != null)

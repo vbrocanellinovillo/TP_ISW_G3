@@ -19,8 +19,8 @@ namespace TP_ISW_G3.Control
         private frmDatosFechaHora frmDatosFechaHora;
 
         private double total;
-        private Direccion direccionComercio;
-        private Direccion direccionEntrega;
+        private direccion direccionComercio;
+        private direccion direccionEntrega;
 
         public gestorLoQueSea(frmInicio frmInicio)
         {
@@ -51,7 +51,7 @@ namespace TP_ISW_G3.Control
             frmDireccionComercio.Show();
         }
 
-        public void cargarDireccionComercio(Direccion _direccionComercio)
+        public void cargarDireccionComercio(direccion _direccionComercio)
         {
             direccionComercio = _direccionComercio;
         }
@@ -65,9 +65,9 @@ namespace TP_ISW_G3.Control
             frmDireccionEntrega.Show();
         }
 
-        public void cargarDireccionEntrega(Direccion _direccionEntrega)
+        public void cargarDireccionEntrega(direccion direccionEntrega)
         {
-            direccionEntrega = _direccionEntrega;
+            direccionEntrega = direccionEntrega;
         }
 
         public void crearFormPago()

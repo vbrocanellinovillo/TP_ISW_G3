@@ -163,6 +163,16 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnConfirmarPedido {
+            get {
+                object obj = ResourceManager.GetObject("btnConfirmarPedido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnDirEntrega {
             get {
                 object obj = ResourceManager.GetObject("btnDirEntrega", resourceCulture);
@@ -193,6 +203,16 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnTipoEntrega {
+            get {
+                object obj = ResourceManager.GetObject("btnTipoEntrega", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap direccionComercio {
             get {
                 object obj = ResourceManager.GetObject("direccionComercio", resourceCulture);
@@ -206,6 +226,16 @@ namespace TP_ISW_G3.Properties {
         internal static System.Drawing.Bitmap direccionEntrega {
             get {
                 object obj = ResourceManager.GetObject("direccionEntrega", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formFechaHora {
+            get {
+                object obj = ResourceManager.GetObject("formFechaHora", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace TP_ISW_G3.Properties {
         internal static System.Drawing.Bitmap formloquesea1 {
             get {
                 object obj = ResourceManager.GetObject("formloquesea1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formLoQueSea3 {
+            get {
+                object obj = ResourceManager.GetObject("formLoQueSea3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

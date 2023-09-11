@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.maskedTextBox3);
             this.panel1.Controls.Add(this.maskedTextBox2);
             this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Location = new System.Drawing.Point(11, 137);
+            this.panel1.Location = new System.Drawing.Point(2, 137);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 297);
             this.panel1.TabIndex = 3;
@@ -192,12 +192,15 @@
             // 
             // btnPagar
             // 
+            this.btnPagar.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btnTipoEntrega;
+            this.btnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPagar.Enabled = false;
-            this.btnPagar.Location = new System.Drawing.Point(73, 457);
+            this.btnPagar.FlatAppearance.BorderSize = 0;
+            this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagar.Location = new System.Drawing.Point(57, 440);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(125, 60);
+            this.btnPagar.Size = new System.Drawing.Size(162, 77);
             this.btnPagar.TabIndex = 6;
-            this.btnPagar.Text = "Procesar pago";
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 

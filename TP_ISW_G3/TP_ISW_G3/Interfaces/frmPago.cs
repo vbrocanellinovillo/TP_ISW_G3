@@ -44,10 +44,10 @@ namespace TP_ISW_G3.Interfaces
         private bool dateValid = false;
 
 
-        public frmPago(Control.gestorLoQueSea _gestorLoQueSea)
+        public frmPago(Control.gestorLoQueSea gestorLoQueSea)
         {
             InitializeComponent();
-            gestor = _gestorLoQueSea;
+            gestor = gestorLoQueSea;
         }
 
         public void cargarCombo()

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TP_ISW_G3.Control
 {
-    public class Direccion
+    public class direccion
     {
         private string nombreCalle;
         private string numero;
         private string ciudad;
         private string referencia;
 
-        public Direccion(string nombreCalle, string numero1, string ciudad, string referencia)
+        public direccion(string nombreCalle, string numero1, string ciudad, string referencia)
         {
             this.nombreCalle = nombreCalle;
             this.numero = numero1;
