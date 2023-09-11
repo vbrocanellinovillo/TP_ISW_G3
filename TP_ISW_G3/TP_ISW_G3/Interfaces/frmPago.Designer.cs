@@ -98,7 +98,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(2, 127);
+            this.panel1.Location = new System.Drawing.Point(1, 175);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 276);
             this.panel1.TabIndex = 3;
@@ -255,7 +255,7 @@
             // btnPagar
             // 
             this.btnPagar.Enabled = false;
-            this.btnPagar.Location = new System.Drawing.Point(92, 448);
+            this.btnPagar.Location = new System.Drawing.Point(73, 457);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(125, 60);
             this.btnPagar.TabIndex = 6;
@@ -267,7 +267,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(263, 71);
+            this.label7.Location = new System.Drawing.Point(238, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 5;
@@ -276,7 +276,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(277, 94);
+            this.lblTotal.Location = new System.Drawing.Point(252, 94);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 6;
@@ -286,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 520);
+            this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnPagar);
