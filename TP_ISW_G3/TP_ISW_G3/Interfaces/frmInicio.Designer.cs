@@ -29,62 +29,59 @@
         private void InitializeComponent()
         {
             this.btnLoQueSea = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLoQueSea
             // 
-            this.btnLoQueSea.Location = new System.Drawing.Point(105, 168);
+            this.btnLoQueSea.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btn1;
+            this.btnLoQueSea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoQueSea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoQueSea.FlatAppearance.BorderSize = 0;
+            this.btnLoQueSea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoQueSea.Location = new System.Drawing.Point(81, 245);
             this.btnLoQueSea.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoQueSea.Name = "btnLoQueSea";
-            this.btnLoQueSea.Size = new System.Drawing.Size(116, 60);
+            this.btnLoQueSea.Size = new System.Drawing.Size(138, 66);
             this.btnLoQueSea.TabIndex = 0;
-            this.btnLoQueSea.Text = "Lo que sea";
             this.btnLoQueSea.UseVisualStyleBackColor = true;
             this.btnLoQueSea.Click += new System.EventHandler(this.btnLoQueSea_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DeliveryEat";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(105, 250);
+            this.button1.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btn2;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(81, 339);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 60);
+            this.button1.Size = new System.Drawing.Size(138, 66);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Pedido a comercio";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 520);
+            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources._20230911_095408_0000;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoQueSea);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeliverEat";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnLoQueSea;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
     }
 }
