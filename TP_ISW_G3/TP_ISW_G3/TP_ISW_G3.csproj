@@ -121,5 +121,17 @@
   <ItemGroup>
     <None Include="Recursos\img\20230911_095408_0000.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\20230911_103448_0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formloquesea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btnCargarImagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\btncIrDireccion.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

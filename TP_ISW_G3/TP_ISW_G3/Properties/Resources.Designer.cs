@@ -73,6 +73,16 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20230911_103448_0000 {
+            get {
+                object obj = ResourceManager.GetObject("20230911_103448_0000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn1 {
             get {
                 object obj = ResourceManager.GetObject("btn1", resourceCulture);
@@ -86,6 +96,46 @@ namespace TP_ISW_G3.Properties {
         internal static System.Drawing.Bitmap btn2 {
             get {
                 object obj = ResourceManager.GetObject("btn2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnCargarImagen {
+            get {
+                object obj = ResourceManager.GetObject("btnCargarImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btncIrDireccion {
+            get {
+                object obj = ResourceManager.GetObject("btncIrDireccion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formloquesea {
+            get {
+                object obj = ResourceManager.GetObject("formloquesea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formloquesea1 {
+            get {
+                object obj = ResourceManager.GetObject("formloquesea1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

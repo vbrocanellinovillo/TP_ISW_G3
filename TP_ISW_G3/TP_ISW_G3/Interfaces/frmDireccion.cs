@@ -41,6 +41,7 @@ namespace TP_ISW_G3.Interfaces
             if (titulo == "Dirección Comercio")
             {
                 btnNext.Text = "Ir a dirección de entrega";
+                this.BackgroundImage = 
             } else
             {
                 btnNext.Text = "Ir a pago";
