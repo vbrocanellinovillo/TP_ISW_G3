@@ -45,7 +45,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(23, 87);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(198, 96);
@@ -69,7 +69,7 @@
             this.btnImagen.FlatAppearance.BorderSize = 0;
             this.btnImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImagen.Location = new System.Drawing.Point(23, 262);
-            this.btnImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImagen.Margin = new System.Windows.Forms.Padding(2);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(103, 48);
             this.btnImagen.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.btnDireccion.FlatAppearance.BorderSize = 0;
             this.btnDireccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDireccion.Location = new System.Drawing.Point(86, 473);
-            this.btnDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnDireccion.Name = "btnDireccion";
             this.btnDireccion.Size = new System.Drawing.Size(116, 54);
             this.btnDireccion.TabIndex = 4;
@@ -130,7 +130,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(23, 314);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 146);
             this.pictureBox1.TabIndex = 4;
@@ -139,17 +139,16 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(152, 215);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 9;
-            //this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // frmLoQueSea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources.formLoQueSea__2_;
+            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources.formLoQueSea__2____copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.textBox1);
@@ -161,7 +160,7 @@
             this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.txtDescripcion);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLoQueSea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido \"Lo Que Sea\"";

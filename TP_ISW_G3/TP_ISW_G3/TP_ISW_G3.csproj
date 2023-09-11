@@ -199,5 +199,8 @@
   <ItemGroup>
     <None Include="Recursos\img\panelEfectivo3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\formLoQueSea %282%29 - copia.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

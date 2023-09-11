@@ -233,6 +233,16 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formLoQueSea__2____copia {
+            get {
+                object obj = ResourceManager.GetObject("formLoQueSea (2) - copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap formloquesea1 {
             get {
                 object obj = ResourceManager.GetObject("formloquesea1", resourceCulture);
