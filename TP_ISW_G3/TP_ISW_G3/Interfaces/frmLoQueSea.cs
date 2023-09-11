@@ -14,7 +14,7 @@ namespace TP_ISW_G3.Interfaces
 {
     public partial class frmLoQueSea : Form
     {
-        gestorLoQueSea gestor;
+        private gestorLoQueSea gestor;
 
         private string descriptionValue;
         
@@ -33,6 +33,7 @@ namespace TP_ISW_G3.Interfaces
             gestor = gestorLoQueSea;   
         }
 
+        // Evento para cargar la imagen
         private void button1_Click(object sender, EventArgs e)
         {
            
@@ -65,26 +66,32 @@ namespace TP_ISW_G3.Interfaces
             }
         }
 
+        // Evento cuando se quiere pasar a ingresar la dirección de comercio
         private void btnDireccion_Click(object sender, EventArgs e)
         {
+            // Validar que se ingrese descripción
             if(!descriptionValid)
             {
-                MessageBox.Show("Por favor completar la descripcion");
+                MessageBox.Show("Por favor ingresar una descripcion valida");
                 descriptionTouched = true;
+                validarDescripcion();
                 estiloDescripcion();
                 txtDescripcion.Focus();
                 return;
             }
 
+            // Validar que se ingrese un precio valido
             if (!priceValid)
             {
                 MessageBox.Show("Por favor ingresar un precio valido");
                 priceTouched = true;
+                validarPrecio();
                 estiloPrecio();
                 txtPrecio.Focus();
                 return;
             }
 
+            // Validación extra para el manejo de excepciones con el preico
             double precio;
 
             if (double.TryParse(txtPrecio.Text, out precio))
@@ -95,6 +102,7 @@ namespace TP_ISW_G3.Interfaces
             {
                 MessageBox.Show("Por favor ingresar un precio valido");
                 priceTouched = true;
+                validarPrecio();
                 estiloPrecio();
                 txtPrecio.Focus();
                 return;
@@ -106,9 +114,11 @@ namespace TP_ISW_G3.Interfaces
 
         public void validarDescripcion()
         {
+            // Validar que se ingrese descripción (que no sea cadena vacia)
             if (descriptionValue.Trim() == "" )
             {
                 descriptionValid = false;
+                label2.Text = "*Por favor ingrese una descripción";
                 return;
             }
 
@@ -116,12 +126,13 @@ namespace TP_ISW_G3.Interfaces
             return;
         }
 
+        // Cambiar color del textbox y mostrar mensajes de error
         public void estiloDescripcion()
         {
+            // Si no es valido y si la caja de texto ya fue enfocada (para que no muestre error apenas carga)
             if (!descriptionValid && descriptionTouched)
             {
                 label2.Visible = true;
-                label2.Text = "*Por favor ingrese una descripción";
                 label2.ForeColor = gestor.setErrorText();
 
                 txtDescripcion.BackColor = gestor.setErrorColor();
@@ -135,17 +146,20 @@ namespace TP_ISW_G3.Interfaces
 
         public void validarPrecio()
         {
-
+            // Validar que se ingrese un precio
             if (priceValue.Trim().Length == 0)
             {
                 priceValid = false;
+                label3.Text = "*Por favor ingrese un precio";
                 return;
             }
 
+            // Validar formato del precio
             double precio;
             if (double.TryParse(priceValue, out precio))
             {
                 priceValid = true;
+                label3.Text = "*Por favor ingrese un precio valido";
                 return;
             } else
             {
@@ -159,7 +173,6 @@ namespace TP_ISW_G3.Interfaces
             if (!priceValid && priceTouched)
             {
                 label3.Visible = true;
-                label3.Text = "*Por favor ingrese un precio valido";
                 label3.ForeColor = gestor.setErrorText();
 
                 txtPrecio.BackColor = gestor.setErrorColor();
@@ -171,13 +184,16 @@ namespace TP_ISW_G3.Interfaces
             }
         }
 
+        // Evento que ocurre cuando cambia el valor ingresado en la caja de texto de descripción
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
+            // Capturar valor de la caja de texto y hacer validaciones y cambios en la interfaz según corresponda
             descriptionValue = txtDescripcion.Text;
             validarDescripcion();
             estiloDescripcion();
         }
 
+        // Evento que ocurre cuando cambia el valor ingresado en la caja de texto del precio
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
             priceValue = txtPrecio.Text;
@@ -185,6 +201,7 @@ namespace TP_ISW_G3.Interfaces
             estiloPrecio();
         }
 
+        // Evento que se ejecuta cuando la caja de texto de la descripción pierde el foco
         private void txtDescripcion_Leave(object sender, EventArgs e)
         {
             descriptionTouched = true;
@@ -192,6 +209,7 @@ namespace TP_ISW_G3.Interfaces
             estiloDescripcion();
         }
 
+        // Evento que se ejecuta cuando la caja de texto del precio pierde el foco
         private void txtPrecio_Leave(object sender, EventArgs e)
         {
             priceTouched = true;
@@ -199,6 +217,7 @@ namespace TP_ISW_G3.Interfaces
             estiloPrecio();
         }
 
+        // Limpiar variables y cajas de texto
         public void resetTxts()
         {
             txtDescripcion.Text = "";
