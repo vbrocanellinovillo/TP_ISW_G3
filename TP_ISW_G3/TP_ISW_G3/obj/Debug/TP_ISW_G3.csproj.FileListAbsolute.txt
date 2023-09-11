@@ -30,3 +30,19 @@ C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfa
 C:\Users\Valentina\Git\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources
 F:\Documentos\Utn\4to año\Ingenieria de Software\Tp c\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmEntrega.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.exe.config
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.exe
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\bin\Debug\TP_ISW_G3.pdb
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.AssemblyReference.cache
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.SuggestedBindingRedirects.cache
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDatosFechaHora.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmDireccion.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmEntrega.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.frmInicio.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmLoQueSea.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Interfaces.frmPago.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.Properties.Resources.resources
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.GenerateResource.cache
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.csproj.CoreCompileInputs.cache
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.exe
+E:\UTN 2023\ISW\TP N2\TP_ISW_G3\TP_ISW_G3\TP_ISW_G3\obj\Debug\TP_ISW_G3.pdb

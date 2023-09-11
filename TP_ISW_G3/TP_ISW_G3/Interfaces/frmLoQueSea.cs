@@ -29,11 +29,56 @@ namespace TP_ISW_G3.Interfaces
         private bool priceValid;
         private bool priceTouched;
 
+        private bool allowDot = true;
+
         public frmLoQueSea(gestorLoQueSea gestorLoQueSea)
         {
             InitializeComponent();
-            gestor = gestorLoQueSea;   
+            gestor = gestorLoQueSea;
+
+
+            this.Controls.Add(textBox1);
+
+            textBox1.KeyPress += TextBox1_KeyPress;
+            textBox1.TextChanged += TextBox1_TextChanged;
         }
+
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string inputText = textBox1.Text;
+
+            if (!string.IsNullOrEmpty(inputText))
+            {
+                decimal value;
+
+                if (decimal.TryParse(inputText, out value))
+                {
+                    // Formatear el valor con punto como separador de miles y coma como separador decimal
+                    textBox1.Text = value.ToString("N2");
+                    textBox1.SelectionStart = textBox1.Text.Length; // Colocar el cursor al final del TextBox
+                }
+            }
+        }
+
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                if ((e.KeyChar == '-' && textBox1.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
+                {
+                    // Aceptar un guión para números negativos o un punto para decimales
+                    allowDot = !allowDot;
+                }
+                else
+                {
+                    e.Handled = true; // Ignorar otros caracteres
+                }
+            }
+        }
+
 
         // Evento para cargar la imagen
         private void button1_Click(object sender, EventArgs e)
@@ -251,28 +296,8 @@ namespace TP_ISW_G3.Interfaces
                 //textBox1.Culture = customCulture;
             
         }
-
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && (sender as TextBox).Text.Contains(","))
-            {
-                e.Handled = true;
-            }
-
-        }
     }
-    }
+}
     
     
     
