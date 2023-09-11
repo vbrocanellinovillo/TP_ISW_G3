@@ -41,7 +41,9 @@ namespace TP_ISW_G3.Interfaces
 
         public void validarFecha()
         {
-            if (dateValue < DateTime.Now)
+            DateTime fechaActual = DateTime.Now;
+
+            if (dateValue > DateTime.Now)
             {
                 dateValid = false;
                 label1.Text = "*Por favor ingrese una fecha mayor o igual a la actual";
@@ -60,7 +62,7 @@ namespace TP_ISW_G3.Interfaces
                 label1.ForeColor = gestor.setErrorText();
             } else
             {
-                label2.Visible = false;
+                label1.Visible = false;
             }
         }
 
