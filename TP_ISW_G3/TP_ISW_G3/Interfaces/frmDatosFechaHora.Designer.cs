@@ -105,7 +105,9 @@
             this.Controls.Add(this.dtpFechaHora);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmDatosFechaHora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos fecha y hora";
             this.ResumeLayout(false);
             this.PerformLayout();

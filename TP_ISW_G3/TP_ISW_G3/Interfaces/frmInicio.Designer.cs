@@ -40,7 +40,7 @@
             this.btnLoQueSea.FlatAppearance.BorderSize = 0;
             this.btnLoQueSea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoQueSea.Location = new System.Drawing.Point(81, 245);
-            this.btnLoQueSea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoQueSea.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoQueSea.Name = "btnLoQueSea";
             this.btnLoQueSea.Size = new System.Drawing.Size(138, 66);
             this.btnLoQueSea.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(81, 339);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 66);
             this.button1.TabIndex = 2;
@@ -71,7 +71,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLoQueSea);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeliverEat";

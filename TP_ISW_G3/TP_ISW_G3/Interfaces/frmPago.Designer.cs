@@ -30,6 +30,7 @@
         {
             this.cmbMediosPago = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.btnPagar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,16 @@
             this.panel1.Size = new System.Drawing.Size(272, 297);
             this.panel1.TabIndex = 3;
             this.panel1.Visible = false;
+            // 
+            // txtEfectivo
+            // 
+            this.txtEfectivo.Location = new System.Drawing.Point(15, 41);
+            this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.Size = new System.Drawing.Size(119, 20);
+            this.txtEfectivo.TabIndex = 2;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
+            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
+            this.txtEfectivo.Leave += new System.EventHandler(this.txtEfectivo_Leave);
             // 
             // label14
             // 
@@ -216,16 +226,6 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total";
             // 
-            // txtEfectivo
-            // 
-            this.txtEfectivo.Location = new System.Drawing.Point(15, 41);
-            this.txtEfectivo.Name = "txtEfectivo";
-            this.txtEfectivo.Size = new System.Drawing.Size(119, 20);
-            this.txtEfectivo.TabIndex = 2;
-            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
-            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
-            this.txtEfectivo.Leave += new System.EventHandler(this.txtEfectivo_Leave);
-            // 
             // frmPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +238,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbMediosPago);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "frmPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pago";

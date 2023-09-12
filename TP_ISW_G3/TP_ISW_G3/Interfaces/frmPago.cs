@@ -610,6 +610,32 @@ namespace TP_ISW_G3.Interfaces
                 }
             }
 
+            // Calcular el vuelto a devolver
+            double total = Convert.ToDouble(gestor.devolverTotal());
+
+            double vuelto = -1;
+
+            if (txtEfectivo.Text.Trim().Length > 0)
+            {
+                // Validación extra del formato del valor ingresado
+                double montoIngresado;
+
+                if (double.TryParse(txtEfectivo.Text.Trim(), out montoIngresado))
+                {
+                    vuelto = montoIngresado - total;
+                    // Si el vuelto es positivo se muestra, sino no se muestra nada
+                    maskedTextBox2.Text = (vuelto >= 0) ? vuelto.ToString() : "";
+
+                    validarEfectivo();
+                    estiloCantidadEfectivo();
+
+                }
+                else
+                {
+                    cantidadEfectivoValid = false;
+                }
+            }
+
             validarEfectivo();
             estiloCantidadEfectivo();
         }
