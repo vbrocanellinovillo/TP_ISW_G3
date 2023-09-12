@@ -58,7 +58,7 @@ namespace TP_ISW_G3.Interfaces
             if (timeValue.TotalHours <= 7)
             {
                 timeValid = false;
-                MessageBox.Show("No se puede en ese horario");
+                MessageBox.Show("No se realizan entregas entre las 12 PM y las 7 AM");
                 return;
             }
 
@@ -120,6 +120,7 @@ namespace TP_ISW_G3.Interfaces
             dateValue = dtpFechaHora.Value;
             //validarFecha();
             //estiloFecha();
+            //validarHora();
             //estiloHora();
         }
 
@@ -176,6 +177,7 @@ namespace TP_ISW_G3.Interfaces
 
                 label2.Visible = true;
                 label2.ForeColor = gestor.setErrorText();
+
             } else
             {
                 label2.Visible = false;

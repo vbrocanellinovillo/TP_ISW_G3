@@ -174,7 +174,7 @@ namespace TP_ISW_G3.Interfaces
             if (streetValue.Trim() == "")
             {
                 streetValid = false;
-                label5.Text = "*Por favor ingrese la calle";
+                label5.Text = "Ingrese la calle";
                 return;
             }
 
@@ -221,7 +221,7 @@ namespace TP_ISW_G3.Interfaces
             if (numberValue.Trim().Length == 0)
             {
                 numberValid = false;
-                label6.Text = "*Por favor ingrese un número de calle";
+                label6.Text = "Ingrese de nro de calle";
                 return;
             }
 
@@ -235,7 +235,7 @@ namespace TP_ISW_G3.Interfaces
             else
             {
                 numberValid = false;
-                label6.Text = "*Por favor ingrese un número de calle con formato valido";
+                label6.Text = "Ingrese un nro de calle";
                 return;
             }
         }
@@ -280,7 +280,7 @@ namespace TP_ISW_G3.Interfaces
             if (cmbCiudades.SelectedIndex == -1) 
             {
                 cmbValid = false;
-                label7.Text = "*Por favor seleccione una ciudad";
+                label7.Text = "*Seleccione una ciudad";
                 return;
             }
 
