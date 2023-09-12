@@ -16,6 +16,7 @@ namespace TP_ISW_G3.Interfaces
 
         private gestorLoQueSea gestor;
         private DateTime dateValue;
+        private TimeSpan timeValue;
 
         private bool dateValid;
         private bool dateTouched;
@@ -28,6 +29,25 @@ namespace TP_ISW_G3.Interfaces
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
+            DateTime fechaActual = DateTime.Now.Date;
+            TimeSpan horaActual = DateTime.Now.TimeOfDay;
+
+            if (dateValue.Date < fechaActual.Date)
+            {
+                dateValid = false;
+                MessageBox.Show("LA FECHA TIENE QUE SER MAYOR A HOY");
+                return;
+            }
+            if(dateValue == fechaActual)
+            {
+                if(timeValue < horaActual)
+                {
+                    dateValid = false;
+                    MessageBox.Show("LA HORA TIENE QUE SER MAYOR A AHORA");
+                    return;
+                }
+            }
             DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas es fecha y hora?", "Confirmación", MessageBoxButtons.YesNo);
 
 
@@ -43,10 +63,10 @@ namespace TP_ISW_G3.Interfaces
         {
             DateTime fechaActual = DateTime.Now;
 
-            if (dateValue > DateTime.Now)
+            if (dateValue > fechaActual)
             {
                 dateValid = false;
-                label1.Text = "*Por favor ingrese una fecha mayor o igual a la actual";
+                MessageBox.Show("mal");
                 return;
             }
 
@@ -69,15 +89,20 @@ namespace TP_ISW_G3.Interfaces
         private void dtpFechaHora_ValueChanged(object sender, EventArgs e)
         {
             dateValue = dtpFechaHora.Value;
-            validarFecha();
+           // validarFecha();
             estiloFecha();
         }
 
         private void dtpFechaHora_Leave(object sender, EventArgs e)
         {
             dateTouched = true;
-            validarFecha();
+           // validarFecha();
             estiloFecha();
+        }
+
+        private void dtpHora_ValueChanged(object sender, EventArgs e)
+        {
+            timeValue = dtpHora.Value.TimeOfDay;
         }
     }
 }
