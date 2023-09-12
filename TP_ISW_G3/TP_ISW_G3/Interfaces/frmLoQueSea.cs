@@ -59,24 +59,28 @@ namespace TP_ISW_G3.Interfaces
                     //textBox1.SelectionStart = textBox1.Text.Length; // Colocar el cursor al final del TextBox
                 }
             }
+
+            priceValue = textBox1.Text;
+            validarPrecio();
+            estiloPrecio();
         }
 
         private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+            char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
 
-            //if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            //{
-            //    if ((e.KeyChar == '-' && textBox1.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
-            //    {
-            //        // Aceptar un guión para números negativos o un punto para decimales
-            //        allowDot = !allowDot;
-            //    }
-            //    else
-            //    {
-            //        e.Handled = true; // Ignorar otros caracteres
-            //    }
-            //}
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                if ((e.KeyChar == '-' && textBox1.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
+                {
+                    // Aceptar un guión para números negativos o un punto para decimales
+                    allowDot = !allowDot;
+                }
+                else
+                {
+                    e.Handled = true; // Ignorar otros caracteres
+                }
+            }
 
         }
 
@@ -135,14 +139,14 @@ namespace TP_ISW_G3.Interfaces
                 priceTouched = true;
                 validarPrecio();
                 estiloPrecio();
-                txtPrecio.Focus();
+                textBox1.Focus();
                 return;
             }
 
             // Validación extra para el manejo de excepciones con el preico
             double precio;
 
-            if (double.TryParse(txtPrecio.Text, out precio))
+            if (double.TryParse(textBox1.Text, out precio))
             {
                 gestor.cargarTotal(precio);
             }
@@ -152,7 +156,7 @@ namespace TP_ISW_G3.Interfaces
                 priceTouched = true;
                 validarPrecio();
                 estiloPrecio();
-                txtPrecio.Focus();
+                textBox1.Focus();
                 return;
             }
 
@@ -225,12 +229,12 @@ namespace TP_ISW_G3.Interfaces
                 label3.Visible = true;
                 label3.ForeColor = gestor.setErrorText();
 
-                txtPrecio.BackColor = gestor.setErrorColor();
+                textBox1.BackColor = gestor.setErrorColor();
             } else
             {
                 label3.Visible = false;
 
-                txtPrecio.BackColor = gestor.clearErrorColor();
+                textBox1.BackColor = gestor.clearErrorColor();
             }
         }
 
@@ -246,9 +250,9 @@ namespace TP_ISW_G3.Interfaces
         // Evento que ocurre cuando cambia el valor ingresado en la caja de texto del precio
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
-            priceValue = txtPrecio.Text;
-            validarPrecio();
-            estiloPrecio();
+            //priceValue = txtPrecio.Text;
+            //validarPrecio();
+            //estiloPrecio();
         }
 
         // Evento que se ejecuta cuando la caja de texto de la descripción pierde el foco
@@ -262,22 +266,22 @@ namespace TP_ISW_G3.Interfaces
         // Evento que se ejecuta cuando la caja de texto del precio pierde el foco
         private void txtPrecio_Leave(object sender, EventArgs e)
         {
-            priceTouched = true;
-            validarPrecio();
-            estiloPrecio();
+            //priceTouched = true;
+            //validarPrecio();
+            //estiloPrecio();
         }
 
         // Limpiar variables y cajas de texto
         public void resetTxts()
         {
             txtDescripcion.Text = "";
-            txtPrecio.Text = "";
+            textBox1.Text = "";
 
             descriptionValue = "";
             priceValue = "";
 
             txtDescripcion.BackColor = gestor.clearErrorColor();
-            txtPrecio.BackColor = gestor.clearErrorColor();
+            textBox1.BackColor = gestor.clearErrorColor();
 
             descriptionValid = false;
             descriptionTouched = false;
@@ -296,6 +300,18 @@ namespace TP_ISW_G3.Interfaces
                 CultureInfo customCulture = new CultureInfo("en-US"); // Punto como separador de miles, coma como separador decimal
                 //textBox1.Culture = customCulture;
             
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            priceTouched = true;
+            validarPrecio();
+            estiloPrecio();
         }
     }
 }

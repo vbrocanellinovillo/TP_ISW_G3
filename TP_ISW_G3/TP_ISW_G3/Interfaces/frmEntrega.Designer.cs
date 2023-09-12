@@ -43,7 +43,7 @@
             this.btnAntes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAntes.Name = "btnAntes";
             this.btnAntes.Size = new System.Drawing.Size(125, 65);
-            this.btnAntes.TabIndex = 0;
+            this.btnAntes.TabIndex = 1;
             this.btnAntes.UseVisualStyleBackColor = true;
             this.btnAntes.Click += new System.EventHandler(this.btnAntes_Click);
             // 
@@ -58,7 +58,7 @@
             this.btnFechaHora.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechaHora.Name = "btnFechaHora";
             this.btnFechaHora.Size = new System.Drawing.Size(125, 64);
-            this.btnFechaHora.TabIndex = 1;
+            this.btnFechaHora.TabIndex = 2;
             this.btnFechaHora.UseVisualStyleBackColor = true;
             this.btnFechaHora.Click += new System.EventHandler(this.btnFechaHora_Click);
             // 

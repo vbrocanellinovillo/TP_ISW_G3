@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_ISW_G3.Control;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TP_ISW_G3.Interfaces
 {
@@ -43,6 +45,8 @@ namespace TP_ISW_G3.Interfaces
         private bool dateTouched = false;
         private bool dateValid = false;
 
+        private bool allowDot = true;
+
 
         public frmPago(Control.gestorLoQueSea gestorLoQueSea)
         {
@@ -61,6 +65,8 @@ namespace TP_ISW_G3.Interfaces
         // Ajustar labels y textboxs según la selección del combo
         public void mostrarPagoEfectivo()
         {
+            maskedTextBox1.Visible = false;
+            txtEfectivo.Visible = true;
             panel1.BackgroundImage = Properties.Resources.panelEfectivo3;
             maskedTextBox2.Enabled = false;
 
@@ -73,6 +79,9 @@ namespace TP_ISW_G3.Interfaces
 
         public void mostrarPagoTarjeta()
         {
+            txtEfectivo.Visible = false;
+            maskedTextBox1.Visible = true;
+
             panel1.BackgroundImage = Properties.Resources.panelTarjeta;
             maskedTextBox2.Enabled = true;
             maskedTextBox2.Mask = "";
@@ -165,7 +174,7 @@ namespace TP_ISW_G3.Interfaces
         public void validarEfectivo()
         {
             double efectivo;
-            if (double.TryParse(maskedText1Value, out efectivo))
+            if (double.TryParse(txtEfectivo.Text, out efectivo))
             {
                 // Si el monto ingresado es menor al total no es valido
                 if (efectivo < Convert.ToDouble(gestor.devolverTotal()))
@@ -198,7 +207,7 @@ namespace TP_ISW_G3.Interfaces
                 label11.ForeColor = gestor.setErrorText();
                 
                 // Color de la caja de texto
-                maskedTextBox1.BackColor = gestor.setErrorColor();
+                txtEfectivo.BackColor = gestor.setErrorColor();
             }
             else
             {
@@ -206,7 +215,7 @@ namespace TP_ISW_G3.Interfaces
                 label11.Visible = false;
 
                 // Poner caja de texto en blanco
-                maskedTextBox1.BackColor = gestor.clearErrorColor();
+                txtEfectivo.BackColor = gestor.clearErrorColor();
             }
         }
 
@@ -221,7 +230,7 @@ namespace TP_ISW_G3.Interfaces
             }
 
             // Revisar ese 12 despues
-            if (maskedText1Value[0].ToString() == "4" && maskedText1Value.Trim().Length >= 12 )
+            if (maskedText1Value[0].ToString() == "4" && maskedText1Value.Trim().Length == 16)
             {
                 nroTarjetaValid = true;
                 return;
@@ -445,7 +454,7 @@ namespace TP_ISW_G3.Interfaces
             if (maskedText4Value.Length != 7)
             {
                 dateValid = false;
-                label14.Text = "*Por favor ingrese la fecha completa";
+                label14.Text = "*Por favor ingrese una fecha valida";
                 return;
             }
 
@@ -585,5 +594,49 @@ namespace TP_ISW_G3.Interfaces
 
         }
 
+        private void txtEfectivo_TextChanged(object sender, EventArgs e)
+        {
+            string inputText = txtEfectivo.Text;
+
+            if (!string.IsNullOrEmpty(inputText))
+            {
+                decimal value;
+
+                if (decimal.TryParse(inputText, out value))
+                {
+                    // Formatear el valor con punto como separador de miles y coma como separador decimal
+                    txtEfectivo.Text = value.ToString("N2");
+                    //textBox1.SelectionStart = textBox1.Text.Length; // Colocar el cursor al final del TextBox
+                }
+            }
+
+            validarEfectivo();
+            estiloCantidadEfectivo();
+        }
+
+        private void txtEfectivo_Leave(object sender, EventArgs e)
+        {
+            cantidadEfectivoTouched = true;
+            validarEfectivo();
+            estiloCantidadEfectivo();
+        }
+
+        private void txtEfectivo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                if ((e.KeyChar == '-' && txtEfectivo.Text.Length == 0) || (e.KeyChar == decimalSeparator && allowDot))
+                {
+                    // Aceptar un guión para números negativos o un punto para decimales
+                    allowDot = !allowDot;
+                }
+                else
+                {
+                    e.Handled = true; // Ignorar otros caracteres
+                }
+            }
+        }
     }
 }

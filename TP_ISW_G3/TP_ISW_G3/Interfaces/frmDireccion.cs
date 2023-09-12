@@ -284,21 +284,6 @@ namespace TP_ISW_G3.Interfaces
                 return;
             }
 
-            if(titulo== "Direccion Entrega")
-            {
-                if(cmbCiudades.SelectedIndex == seleccionCiudad)
-                {
-                    cmbValid = true;
-                    return;
-                }
-                else
-                {
-                    cmbValid = false;
-                    label7.Text = "*Por favor seleccione la ciudad correcta";
-                    return;
-                }
-            }
-
             cmbValid = true;
             return;
         }

@@ -59,6 +59,7 @@
             // 
             // cmbCiudades
             // 
+            this.cmbCiudades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCiudades.FormattingEnabled = true;
             this.cmbCiudades.Location = new System.Drawing.Point(28, 258);
             this.cmbCiudades.Margin = new System.Windows.Forms.Padding(2);

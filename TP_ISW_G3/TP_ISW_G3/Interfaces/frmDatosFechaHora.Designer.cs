@@ -42,7 +42,7 @@
             this.dtpFechaHora.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaHora.Name = "dtpFechaHora";
             this.dtpFechaHora.Size = new System.Drawing.Size(202, 20);
-            this.dtpFechaHora.TabIndex = 0;
+            this.dtpFechaHora.TabIndex = 1;
             this.dtpFechaHora.ValueChanged += new System.EventHandler(this.dtpFechaHora_ValueChanged);
             // 
             // btnConfirmar
@@ -88,7 +88,7 @@
             this.dtpHora.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(151, 20);
-            this.dtpHora.TabIndex = 6;
+            this.dtpHora.TabIndex = 2;
             this.dtpHora.ValueChanged += new System.EventHandler(this.dtpHora_ValueChanged);
             // 
             // frmDatosFechaHora

@@ -43,11 +43,13 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.btnPagar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMediosPago
             // 
+            this.cmbMediosPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMediosPago.FormattingEnabled = true;
             this.cmbMediosPago.Location = new System.Drawing.Point(15, 96);
             this.cmbMediosPago.Name = "cmbMediosPago";
@@ -59,6 +61,7 @@
             // 
             this.panel1.BackgroundImage = global::TP_ISW_G3.Properties.Resources.panelEfectivo3;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.txtEfectivo);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.maskedTextBox4);
             this.panel1.Controls.Add(this.label13);
@@ -213,6 +216,16 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total";
             // 
+            // txtEfectivo
+            // 
+            this.txtEfectivo.Location = new System.Drawing.Point(15, 41);
+            this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.Size = new System.Drawing.Size(119, 20);
+            this.txtEfectivo.TabIndex = 2;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
+            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
+            this.txtEfectivo.Leave += new System.EventHandler(this.txtEfectivo_Leave);
+            // 
             // frmPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,5 +265,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.TextBox txtEfectivo;
     }
 }
