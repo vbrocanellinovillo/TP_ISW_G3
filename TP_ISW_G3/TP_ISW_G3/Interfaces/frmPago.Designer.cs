@@ -207,6 +207,7 @@
             // 
             this.btnPagar.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btnTipoEntrega;
             this.btnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPagar.Enabled = false;
             this.btnPagar.FlatAppearance.BorderSize = 0;
             this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,6 +239,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbMediosPago);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "frmPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

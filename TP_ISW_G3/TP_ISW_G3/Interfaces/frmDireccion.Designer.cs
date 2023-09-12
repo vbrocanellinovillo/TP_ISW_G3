@@ -144,6 +144,7 @@
             this.Controls.Add(this.txtReferencia);
             this.Controls.Add(this.txtCalle);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmDireccion";

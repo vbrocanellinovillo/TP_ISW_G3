@@ -72,6 +72,7 @@
             this.Controls.Add(this.btnFechaHora);
             this.Controls.Add(this.btnAntes);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmEntrega";

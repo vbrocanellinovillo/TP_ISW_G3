@@ -49,6 +49,7 @@
             // 
             this.btnConfirmar.BackgroundImage = global::TP_ISW_G3.Properties.Resources.btnConfirmarPedido;
             this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Location = new System.Drawing.Point(72, 441);
@@ -105,6 +106,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.dtpFechaHora);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmDatosFechaHora";

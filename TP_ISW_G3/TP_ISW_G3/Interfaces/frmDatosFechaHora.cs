@@ -120,6 +120,7 @@ namespace TP_ISW_G3.Interfaces
             dateValue = dtpFechaHora.Value;
             //validarFecha();
             //estiloFecha();
+            //estiloHora();
         }
 
         public void validarHora()
@@ -127,7 +128,23 @@ namespace TP_ISW_G3.Interfaces
             DateTime fechaActual = DateTime.Now;
             TimeSpan horaActual = DateTime.Now.TimeOfDay;
 
-            if (timeValue.TotalHours < 7)
+            if (!dateValid)
+            {
+                timeValid = true;
+                return;
+            }
+
+            if (!horaTouched)
+            {
+                TimeSpan valorAnterior = timeValue;
+                TimeSpan horaActualAnterior = horaActual;
+
+                horaActual = new TimeSpan(horaActualAnterior.Hours, horaActualAnterior.Minutes, 0);
+                timeValue = new TimeSpan(valorAnterior.Hours, valorAnterior.Minutes, 0);
+            }
+
+
+            if (timeValue.TotalHours <= 7)
             {
                 timeValid = false;
                 label2.Text = "*Por favor ingrese una hora valida";
@@ -152,6 +169,11 @@ namespace TP_ISW_G3.Interfaces
         {
             if (!timeValid)
             {
+                if (label2.Text == "label2")
+                {
+                    return;
+                }
+
                 label2.Visible = true;
                 label2.ForeColor = gestor.setErrorText();
             } else

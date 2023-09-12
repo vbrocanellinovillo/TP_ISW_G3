@@ -71,6 +71,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLoQueSea);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmInicio";
