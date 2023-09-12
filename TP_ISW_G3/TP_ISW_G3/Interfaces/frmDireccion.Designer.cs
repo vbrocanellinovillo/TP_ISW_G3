@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources.direccionComercio;
+            this.BackgroundImage = global::TP_ISW_G3.Properties.Resources.dirComercio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(295, 529);
             this.Controls.Add(this.label7);

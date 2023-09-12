@@ -213,6 +213,16 @@ namespace TP_ISW_G3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dirComercio {
+            get {
+                object obj = ResourceManager.GetObject("dirComercio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap direccionComercio {
             get {
                 object obj = ResourceManager.GetObject("direccionComercio", resourceCulture);
@@ -226,6 +236,16 @@ namespace TP_ISW_G3.Properties {
         internal static System.Drawing.Bitmap direccionEntrega {
             get {
                 object obj = ResourceManager.GetObject("direccionEntrega", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dirEntrega {
+            get {
+                object obj = ResourceManager.GetObject("dirEntrega", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

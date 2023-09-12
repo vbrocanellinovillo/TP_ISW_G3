@@ -15,11 +15,11 @@ namespace TP_ISW_G3.Interfaces
     {
 
         private gestorLoQueSea gestor;
-        private DateTime dateValue;
-        private TimeSpan timeValue;
+        private DateTime dateValue = DateTime.Now;
+        private TimeSpan timeValue = DateTime.Now.TimeOfDay;
 
-        private bool dateValid;
-        private bool dateTouched;
+        private bool dateValid = false;
+        private bool timeValid = false;
 
         public frmDatosFechaHora(Control.gestorLoQueSea gestorLoQueSea)
         {
@@ -63,20 +63,26 @@ namespace TP_ISW_G3.Interfaces
         {
             DateTime fechaActual = DateTime.Now;
 
-            if (dateValue > fechaActual)
+            if (dateValue.Date == fechaActual.Date) 
             {
-                dateValid = false;
-                MessageBox.Show("mal");
+                dateValid = true;
                 return;
             }
 
-            dateTouched = true;
+            if (dateValue < fechaActual)
+            {
+                dateValid = false;
+                label1.Text = "*Por favor ingrese una fecha valida";
+                return;
+            }
+
+            dateValid = true;
             return;
         }
 
         public void estiloFecha()
         {
-            if (!dateValid && dateTouched)
+            if (!dateValid)
             {
                 label1.Visible = true;
                 label1.ForeColor = gestor.setErrorText();
@@ -89,20 +95,54 @@ namespace TP_ISW_G3.Interfaces
         private void dtpFechaHora_ValueChanged(object sender, EventArgs e)
         {
             dateValue = dtpFechaHora.Value;
-           // validarFecha();
+            validarFecha();
             estiloFecha();
         }
 
-        private void dtpFechaHora_Leave(object sender, EventArgs e)
+        public void validarHora()
         {
-            dateTouched = true;
-           // validarFecha();
-            estiloFecha();
+            DateTime fechaActual = DateTime.Now;
+            TimeSpan horaActual = DateTime.Now.TimeOfDay;
+
+            if (timeValue.Hours <= 7 && timeValue.Hours >= 0)
+            {
+                timeValid = false;
+                label2.Text = "*Por favor ingrese una hora despues de las 7 AM y antes de las 12 PM";
+                return;
+            }
+
+            if (dateValue == fechaActual)
+            {
+                if (timeValue.Hours < horaActual.Hours)
+                {
+                    timeValid = false;
+                    label2.Text = "*Hora ingresada menor a la hora actual";
+                    return;
+                }
+            }
+
+            timeValid = true;
+            return;
         }
+
+        public void estiloHora()
+        {
+            if (!timeValid)
+            {
+                label2.Visible = true;
+                label2.ForeColor = gestor.setErrorText();
+            } else
+            {
+                label2.Visible = false;
+            }
+        }
+
 
         private void dtpHora_ValueChanged(object sender, EventArgs e)
         {
             timeValue = dtpHora.Value.TimeOfDay;
+            validarHora();
+            estiloHora();
         }
     }
 }

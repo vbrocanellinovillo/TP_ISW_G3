@@ -214,5 +214,11 @@
   <ItemGroup>
     <None Include="Recursos\img\btnConfirmarPedido.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\dirEntrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\img\dirComercio.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

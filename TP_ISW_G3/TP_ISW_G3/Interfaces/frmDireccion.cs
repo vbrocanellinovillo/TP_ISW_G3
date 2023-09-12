@@ -43,11 +43,11 @@ namespace TP_ISW_G3.Interfaces
 
             if (titulo == "Dirección Comercio")
             {
-                this.BackgroundImage = Properties.Resources.direccionComercio;
+                this.BackgroundImage = Properties.Resources.dirComercio;
                 btnNext.BackgroundImage = Properties.Resources.btnDirEntrega;
             } else
             {
-                this.BackgroundImage = Properties.Resources.direccionEntrega;
+                this.BackgroundImage = Properties.Resources.dirEntrega;
                 btnNext.BackgroundImage = Properties.Resources.btnIrPago;
             }
         }
