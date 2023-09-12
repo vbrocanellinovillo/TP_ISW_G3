@@ -42,7 +42,7 @@ namespace TP_ISW_G3.Interfaces
                 return;
             }
 
-            if (timeValue.Hours <= 7 && timeValue.Hours >= 0)
+            if (timeValue.TotalHours <= 7 && timeValue.TotalHours >= 0)
             {
                 timeValid = false;
                 MessageBox.Show("No se puede en ese horario");
@@ -69,26 +69,26 @@ namespace TP_ISW_G3.Interfaces
             }
         }
 
-        //public void validarFecha()
-        //{
-        //    DateTime fechaActual = DateTime.Now;
+        public void validarFecha()
+        {
+            DateTime fechaActual = DateTime.Now;
 
-        //    if (dateValue.Date == fechaActual.Date) 
-        //    {
-        //        dateValid = true;
-        //        return;
-        //    }
+            if (dateValue.Date == fechaActual.Date)
+            {
+                dateValid = true;
+                return;
+            }
 
-        //    if (dateValue < fechaActual)
-        //    {
-        //        dateValid = false;
-        //        label1.Text = "*Por favor ingrese una fecha valida";
-        //        return;
-        //    }
+            if (dateValue < fechaActual)
+            {
+                dateValid = false;
+                label1.Text = "*Por favor ingrese una fecha valida";
+                return;
+            }
 
-        //    dateValid = true;
-        //    return;
-        //}
+            dateValid = true;
+            return;
+        }
 
         public void estiloFecha()
         {
@@ -114,16 +114,16 @@ namespace TP_ISW_G3.Interfaces
             DateTime fechaActual = DateTime.Now;
             TimeSpan horaActual = DateTime.Now.TimeOfDay;
 
-            if (timeValue.Hours <= 7 && timeValue.Hours >= 0)
+            if (timeValue.TotalDays <= 7 && timeValue.TotalHours >= 0)
             {
                 timeValid = false;
-                label2.Text = "*Por favor ingrese una hora despues de las 7 AM y antes de las 12 PM";
+                label2.Text = "*Por favor ingrese una hora valida";
                 return;
             }
 
             if (dateValue.Date == fechaActual.Date)
             {
-                if (timeValue.Hours < horaActual.Hours)
+                if (timeValue < horaActual)
                 {
                     timeValid = false;
                     label2.Text = "*Hora ingresada menor a la hora actual";
