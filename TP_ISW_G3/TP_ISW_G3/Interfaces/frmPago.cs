@@ -478,7 +478,7 @@ namespace TP_ISW_G3.Interfaces
             if (año < añoActual)
             {
                 dateValid = false;
-                label14.Text = "*Fecha de vencimiento invalida (año menor al acutal)";
+                label14.Text = "*Fecha de vencimiento invalida (año menor al actual)";
                 return;
             }
 

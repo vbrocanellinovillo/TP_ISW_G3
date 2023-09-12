@@ -90,6 +90,7 @@
             this.dtpHora.Size = new System.Drawing.Size(151, 20);
             this.dtpHora.TabIndex = 2;
             this.dtpHora.ValueChanged += new System.EventHandler(this.dtpHora_ValueChanged);
+            this.dtpHora.Leave += new System.EventHandler(this.dtpHora_Leave);
             // 
             // frmDatosFechaHora
             // 

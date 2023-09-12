@@ -21,12 +21,15 @@ namespace TP_ISW_G3.Interfaces
         private bool dateValid = false;
         private bool timeValid = false;
 
+        private bool horaTouched;
+
         public frmDatosFechaHora(Control.gestorLoQueSea gestorLoQueSea)
         {
             InitializeComponent();
             gestor = gestorLoQueSea;
 
             dateValue = DateTime.Now;
+            timeValue = DateTime.Now.TimeOfDay;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -35,6 +38,16 @@ namespace TP_ISW_G3.Interfaces
             DateTime fechaActual = DateTime.Now.Date;
             TimeSpan horaActual = DateTime.Now.TimeOfDay;
 
+
+            if (!horaTouched)
+            {
+                TimeSpan valorAnterior = timeValue;
+                TimeSpan horaActualAnterior = horaActual;
+                horaActual = new TimeSpan(horaActualAnterior.Hours, horaActualAnterior.Minutes, 0);
+                timeValue = new TimeSpan(valorAnterior.Hours, valorAnterior.Minutes, 0);
+            }
+
+
             if (dateValue.Date < fechaActual.Date)
             {
                 dateValid = false;
@@ -42,7 +55,7 @@ namespace TP_ISW_G3.Interfaces
                 return;
             }
 
-            if (timeValue.TotalHours <= 7 && timeValue.TotalHours >= 0)
+            if (timeValue.TotalHours <= 7)
             {
                 timeValid = false;
                 MessageBox.Show("No se puede en ese horario");
@@ -58,7 +71,7 @@ namespace TP_ISW_G3.Interfaces
                     return;
                 }
             }
-            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas es fecha y hora?", "Confirmación", MessageBoxButtons.YesNo);
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas esa fecha y hora?", "Confirmación", MessageBoxButtons.YesNo);
 
 
 
@@ -114,7 +127,7 @@ namespace TP_ISW_G3.Interfaces
             DateTime fechaActual = DateTime.Now;
             TimeSpan horaActual = DateTime.Now.TimeOfDay;
 
-            if (timeValue.TotalDays <= 7 && timeValue.TotalHours >= 0)
+            if (timeValue.TotalHours < 7)
             {
                 timeValid = false;
                 label2.Text = "*Por favor ingrese una hora valida";
@@ -153,6 +166,11 @@ namespace TP_ISW_G3.Interfaces
             timeValue = dtpHora.Value.TimeOfDay;
             //validarHora();
             //estiloHora();
+        }
+
+        private void dtpHora_Leave(object sender, EventArgs e)
+        {
+            horaTouched = true;
         }
     }
 }
