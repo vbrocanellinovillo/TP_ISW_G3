@@ -54,7 +54,7 @@ namespace TP_ISW_G3.Interfaces
         {
             cmbMediosPago.Items.Clear();
             cmbMediosPago.Items.Add("Efectivo");
-            cmbMediosPago.Items.Add("Tarjeta Debito - Visa");
+            cmbMediosPago.Items.Add("Tarjeta Credito - Visa");
         }
 
 
@@ -581,7 +581,6 @@ namespace TP_ISW_G3.Interfaces
 
             // Si llego hasta aca paso todas las validaciones
             resetTxts();
-            MessageBox.Show("Pago procesado con exito!");
             gestor.crearFormEntrega();
 
         }

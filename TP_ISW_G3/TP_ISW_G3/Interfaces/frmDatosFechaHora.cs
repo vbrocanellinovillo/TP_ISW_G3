@@ -15,8 +15,8 @@ namespace TP_ISW_G3.Interfaces
     {
 
         private gestorLoQueSea gestor;
-        private DateTime dateValue = DateTime.Now;
-        private TimeSpan timeValue = DateTime.Now.TimeOfDay;
+        private DateTime dateValue;
+        private TimeSpan timeValue;
 
         private bool dateValid = false;
         private bool timeValid = false;
@@ -25,6 +25,8 @@ namespace TP_ISW_G3.Interfaces
         {
             InitializeComponent();
             gestor = gestorLoQueSea;
+
+            dateValue = DateTime.Now;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -36,15 +38,23 @@ namespace TP_ISW_G3.Interfaces
             if (dateValue.Date < fechaActual.Date)
             {
                 dateValid = false;
-                MessageBox.Show("LA FECHA TIENE QUE SER MAYOR A HOY");
+                MessageBox.Show("La fecha tiene que mayor a la de hoy");
                 return;
             }
-            if(dateValue == fechaActual)
+
+            if (timeValue.Hours <= 7 && timeValue.Hours >= 0)
+            {
+                timeValid = false;
+                MessageBox.Show("No se puede en ese horario");
+                return;
+            }
+
+            if (dateValue.Date == fechaActual.Date)
             {
                 if(timeValue < horaActual)
                 {
                     dateValid = false;
-                    MessageBox.Show("LA HORA TIENE QUE SER MAYOR A AHORA");
+                    MessageBox.Show("La hora tiene que ser mayor a la hora actual");
                     return;
                 }
             }
@@ -59,26 +69,26 @@ namespace TP_ISW_G3.Interfaces
             }
         }
 
-        public void validarFecha()
-        {
-            DateTime fechaActual = DateTime.Now;
+        //public void validarFecha()
+        //{
+        //    DateTime fechaActual = DateTime.Now;
 
-            if (dateValue.Date == fechaActual.Date) 
-            {
-                dateValid = true;
-                return;
-            }
+        //    if (dateValue.Date == fechaActual.Date) 
+        //    {
+        //        dateValid = true;
+        //        return;
+        //    }
 
-            if (dateValue < fechaActual)
-            {
-                dateValid = false;
-                label1.Text = "*Por favor ingrese una fecha valida";
-                return;
-            }
+        //    if (dateValue < fechaActual)
+        //    {
+        //        dateValid = false;
+        //        label1.Text = "*Por favor ingrese una fecha valida";
+        //        return;
+        //    }
 
-            dateValid = true;
-            return;
-        }
+        //    dateValid = true;
+        //    return;
+        //}
 
         public void estiloFecha()
         {
@@ -95,8 +105,8 @@ namespace TP_ISW_G3.Interfaces
         private void dtpFechaHora_ValueChanged(object sender, EventArgs e)
         {
             dateValue = dtpFechaHora.Value;
-            validarFecha();
-            estiloFecha();
+            //validarFecha();
+            //estiloFecha();
         }
 
         public void validarHora()
@@ -111,7 +121,7 @@ namespace TP_ISW_G3.Interfaces
                 return;
             }
 
-            if (dateValue == fechaActual)
+            if (dateValue.Date == fechaActual.Date)
             {
                 if (timeValue.Hours < horaActual.Hours)
                 {
@@ -141,8 +151,8 @@ namespace TP_ISW_G3.Interfaces
         private void dtpHora_ValueChanged(object sender, EventArgs e)
         {
             timeValue = dtpHora.Value.TimeOfDay;
-            validarHora();
-            estiloHora();
+            //validarHora();
+            //estiloHora();
         }
     }
 }
